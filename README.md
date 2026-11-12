@@ -1,5 +1,13 @@
 # 3D Scanner on Android
 
+<p align="center">
+  <img src="assets/project-preview.jpg" alt="Mannequin head lit by projected light and dark stripe patterns, with a phone held in a clamp mount pointing at it" width="380">
+</p>
+
+![Platform: Android (Samsung Galaxy Beam)](https://img.shields.io/badge/platform-Android%20%28Galaxy%20Beam%29-lightgrey)
+![Code: Java + OpenCV for Android](https://img.shields.io/badge/code-Java%20%2B%20OpenCV%20for%20Android-blue)
+![Source: partial snapshot](https://img.shields.io/badge/source-partial%20snapshot-orange)
+
 Structured-light 3D reconstruction using a Samsung Galaxy Beam and a prism to align its projector with the camera's field of view.
 
 Students: Arkadi Godlin, Alex Kligman, Alon Zivrin.
@@ -9,6 +17,10 @@ Supervision: Aaron Wetzler.
 ## Status
 
 **Partial original source recovered. Build and run untested.** `source/` contains 27 unchanged text files from the September 2014 source handoff: 11 Java files, XML resources and original Eclipse/Android project configuration. It is not a complete runnable release.
+
+## Original code
+
+The 27 recovered files are in [`source/`](source/): Java sources under [`source/src/`](source/src/), XML resources under [`source/res/`](source/res/), and the original `AndroidManifest.xml`, `project.properties`, `proguard-project.txt` and Eclipse project files. They are a partial snapshot; see the exclusions below.
 
 ## Running
 
@@ -27,4 +39,6 @@ Excluded: OpenCV/support SDK binaries, APK/class outputs, original Git history, 
 ## Attribution and Updates
 
 The historical website lists Arkadi Godlin, Alex Kligman and Alon Zivrin. The final report identifies Alon Zvirin as the lab engineer; the website credit is retained without asserting he was a student. No blanket software license has been added. Dependencies retain their own terms. Original authors can open an issue to contribute updates or request corrections or removal of their material.
+
+Figure provenance: `assets/project-preview.jpg` is the original student-project photograph from the archived project page on Aaron Wetzler's website, copied without modification. It shows the capture setup, not a reconstruction produced during recovery.
 
