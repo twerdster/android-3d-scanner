@@ -8,37 +8,39 @@
 ![Code: Java + OpenCV for Android](https://img.shields.io/badge/code-Java%20%2B%20OpenCV%20for%20Android-blue)
 ![Source: partial snapshot](https://img.shields.io/badge/source-partial%20snapshot-orange)
 
-Structured-light 3D reconstruction using a Samsung Galaxy Beam and a prism to align its projector with the camera's field of view.
+A historical student project for structured-light 3D reconstruction using a Samsung Galaxy Beam and a prism to align its projector with the camera's field of view.
 
-Students: Arkadi Godlin, Alex Kligman, Alon Zivrin.
+Students: Arkadi Godlin, Alex Kligman.
+
+Lab engineer: Alon Zvirin (historical website spelling: Alon Zivrin).
 
 Supervision: Aaron Wetzler.
 
-## Status
+## Available source
 
-**Partial original source recovered. Build and run untested.** `source/` contains 27 unchanged text files from the September 2014 source handoff: 11 Java files, XML resources and original Eclipse/Android project configuration. It is not a complete runnable release.
+This is a partial historical submission, not a runnable Android release. [`source/`](source/) contains 27 recovered text files: 11 Java files, XML resources, the manifest and the original Eclipse/Android configuration. All 27 files are byte-identical to the recovered originals, as checked with SHA-256.
 
-## Original code
+The capture code projects a sequence of patterns and collects camera frames in NV21/YUV format. [`Reconstructor.java`](source/src/com/project/logic/Reconstructor.java) decodes the projected stripe patterns, corrects camera coordinates using calibration parameters, and computes X, Y and Z arrays. It clears invalid values and median-filters Z, then passes an interleaved coordinate buffer to the OpenGL view, which draws points. Despite the `MeshViewActivity` name, this renderer uses `GL_POINTS`; it does not establish a triangle-mesh export workflow. The reconstruction routine also attempts to write diagnostic BMP images under external storage's `Project/Decode/` directory.
 
-The 27 recovered files are in [`source/`](source/): Java sources under [`source/src/`](source/src/), XML resources under [`source/res/`](source/res/), and the original `AndroidManifest.xml`, `project.properties`, `proguard-project.txt` and Eclipse project files. They are a partial snapshot; see the exclusions below.
+## Setup requirements
 
-## Running
+The historical application requires a Samsung Galaxy Beam, a prism aligning the projector and camera, calibration data, and an Eclipse/ADT Android project with OpenCV for Android. The manifest sets minimum API 8 and target API 11. `project.properties` references OpenCV Library 2.4.4, while `MainActivity` requests OpenCV Manager 2.4.3. That mismatch remains unresolved.
 
-The original project uses Eclipse/ADT, Android/Java, OpenCV for Android and a Samsung Galaxy Beam with an aligned prism. `project.properties` targets Android API 11 and references an external OpenCV Library 2.4.4 project. The manifest sets minimum API 8. However, MainActivity requests OpenCV Manager version 2.4.3 at startup. This original version mismatch is preserved and unresolved; no SDK/editor/compiler version beyond these file values was established.
+The launcher is `com.project.activities.MainActivity`. It expects `Project/config.xml` and `Project/calibration_CB_Ex.log` below external storage. A historical build would also need the omitted OpenCV/support libraries and application assets. Calibration and decode data, raw datasets, SDK binaries, APK/class outputs, original Git history and IDE user state are excluded. Project reports are not included.
 
-The launcher is `com.project.activities.MainActivity`; reconstruction is in `logic/Reconstructor.java`, and mesh display uses `activities/MeshViewActivity.java`. MainActivity expects `Project/config.xml` and `Project/calibration_CB_Ex.log` below external storage. Camera capture uses NV21/YUV and Gray-code patterns. Historical reports say to recalibrate if the prism moves.
+No verified build command or complete configuration is available. Restoring dependencies alone is insufficient: capture also needs the projector/camera geometry and calibration associated with the physical setup.
 
-No original verified one-command build procedure was recovered. A historical build would need the separately obtained OpenCV Android library, support-library dependency and the missing application/calibration resources restored under appropriate terms. It would also need the original hardware/configuration for capture. This subset lacks binary/image assets, calibration/decode arrays and raw datasets; configuration/sample files were not fabricated to make it appear complete.
+## Validation and limitations
 
-Excluded: OpenCV/support SDK binaries, APK/class outputs, original Git history, IDE user state, images and unreviewed reports. Source bytes are unchanged; no recovered code or binary was executed, and no successful reconstruction is claimed.
+A private recovery manifest (not published) records the file-hash comparison for all 27 included files. The documentation review inspected the capture, reconstruction and display paths and their project configuration. No recovered code or binary was compiled or executed, and no successful reconstruction, accuracy measurement or modern Android compatibility is claimed.
 
 ## Links
 
 - [Project entry on Aaron Wetzler's website](https://twerdster.github.io/#3d-scanner-on-android)
 
-## Attribution and Updates
+## Attribution and reuse
 
-The historical website lists Arkadi Godlin, Alex Kligman and Alon Zivrin. The final report identifies Alon Zvirin as the lab engineer; the website credit is retained without asserting he was a student. No blanket software license has been added. Dependencies retain their own terms. Original authors can open an issue to contribute updates or request corrections or removal of their material.
+No blanket software license has been added. Dependencies retain their own terms. Original authors can open an issue to contribute updates or request corrections or removal of their material.
 
 Figure provenance: `assets/project-preview.jpg` is the original student-project photograph from the archived project page on Aaron Wetzler's website, copied without modification. It shows the capture setup, not a reconstruction produced during recovery.
 
