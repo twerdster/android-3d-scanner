@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "scope": "Offline source/resource integrity and bounded static checks; no app build or execution.",
+  "manifest_files_verified": 180,
+  "manifest_bytes_verified": 70600050,
+  "variant_file_counts": {
+    "eclipse-submission": 62,
+    "eclipse-2014": 54,
+    "android-studio": 63,
+    "related-ios-fusion": 1
+  },
+  "image_files_checked": 104,
+  "image_dimensions": {
+    "BMP:360x640": 48,
+    "BMP:480x800": 24,
+    "PNG:144x144": 3,
+    "PNG:48x48": 6,
+    "PNG:512x512": 2,
+    "PNG:72x72": 6,
+    "PNG:800x480": 9,
+    "PNG:96x96": 6
+  },
+  "android_resources": [
+    {
+      "root": "source",
+      "manifest_package": "com.project",
+      "activity_classes_present": [
+        "com.project.activities.MainActivity",
+        "com.project.activities.MeshViewActivity"
+      ],
+      "xml_resource_files_parsed": 11,
+      "java_resource_references_resolved": 26,
+      "missing_local_java_resource_references": []
+    },
+    {
+      "root": "versions/eclipse-2014",
+      "manifest_package": "com.example.dv1",
+      "activity_classes_present": [
+        "com.example.dv1.MainActivity"
+      ],
+      "xml_resource_files_parsed": 8,
+      "java_resource_references_resolved": 26,
+      "missing_local_java_resource_references": []
+    },
+    {
+      "root": "versions/android-studio/app/src/main",
+      "manifest_package": "com.project",
+      "activity_classes_present": [
+        "com.project.activities.MainActivity",
+        "com.project.activities.MeshViewActivity"
+      ],
+      "xml_resource_files_parsed": 11,
+      "java_resource_references_resolved": 26,
+      "missing_local_java_resource_references": []
+    }
+  ],
+  "public_text_files_scanned": 85,
+  "secret_or_private_endpoint_findings": [],
+  "dependencies_bundled": false,
+  "app_build_attempted": false,
+  "app_runtime_tested": false,
+  "related_ios_fragment_standalone_buildable": false
+}

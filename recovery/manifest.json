@@ -1,0 +1,1816 @@
+{
+  "schema_version": 1,
+  "recovery_date": "2026-11-14",
+  "description": "Selected historical scanner source/configuration and synthetic projection resources; no runtime validation.",
+  "original_27_preserved": true,
+  "archive": {
+    "name": "3Dscanner.rar",
+    "bytes": 5487636,
+    "sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+  },
+  "git_snapshot": {
+    "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+    "commit_date": "2014-02-23",
+    "subject": "Latest working"
+  },
+  "exclusions": [
+    "Raw XYZ arrays and captured/calibration datasets",
+    "OpenCV/Android support libraries, SDK binaries and Gradle wrapper JAR",
+    "Generated gen/bin/build and compiled output",
+    "IDE state, local.properties, private Git configuration, refs/history and original archive",
+    "Duplicate Android Studio nested calib_800_480 and calib_640_360 pattern copies",
+    "Related iOS signing-bearing Xcode project, missing companion headers/shaders and data"
+  ],
+  "files": [
+    {
+      "path": "source/.classpath",
+      "variant": "eclipse-submission",
+      "bytes": 475,
+      "sha256": "be4247af27430aa751350fad0a0aab4879d3da2e9e605f3297f3052cff530f31",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/.classpath",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/.project",
+      "variant": "eclipse-submission",
+      "bytes": 838,
+      "sha256": "a0c9ca7fbb8df8c2b8eaab060dd6938f2d5e11f8082636e57e29df9ec5252932",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/.project",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/AndroidManifest.xml",
+      "variant": "eclipse-submission",
+      "bytes": 1293,
+      "sha256": "7b38e1f5b5f68082fe5ecb09fadf91635e2cc7b491e69285d87b410c1ab47b51",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/AndroidManifest.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/app_icon-web.png",
+      "variant": "eclipse-submission",
+      "bytes": 81620,
+      "sha256": "57c0fb1b7c64b3fea1f75d24ffe8594ca6a41235b621eb573279fb15d40afecf",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/app_icon-web.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/proguard-project.txt",
+      "variant": "eclipse-submission",
+      "bytes": 781,
+      "sha256": "9d28f3345f50cb6970293f841ddf6b7d9962c3759495b489f04ce8922ca5abb6",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/proguard-project.txt",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/project.properties",
+      "variant": "eclipse-submission",
+      "bytes": 654,
+      "sha256": "368239d71f2e39323c3f09c017db5982a9ba79b9c4b3c10f9f419198115370d3",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/project.properties",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/app_icon.png",
+      "variant": "eclipse-submission",
+      "bytes": 5535,
+      "sha256": "da6e3db532bbe855f1345d8f527366d48feb7c89d5f396f4ba2a87df93600e42",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/app_icon.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/blue.png",
+      "variant": "eclipse-submission",
+      "bytes": 2661,
+      "sha256": "ccf792e7c7f1e6b35ac364f065beee57c03d5c9c8859e846232d76a8e56c74ed",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/blue.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib1.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "aad7d5378e3d544f531a77643dbb10722528453f3bc731a5d094774b8f4395d6",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib1.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib10.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "05b668c917e550d73787e7d6594888988c3704da246137dbcfb1aa8191343f2f",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib10.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib11.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "e6994e86ac9539479bb852955d0c844a963cf5ff51593c40238f80a9e79dd438",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib11.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib12.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "fb28d16ca1396cb2028add461a5b999a11361be9df407c55fc7113d61ac37864",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib12.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib13.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "aad7d5378e3d544f531a77643dbb10722528453f3bc731a5d094774b8f4395d6",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib13.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib14.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "34d2ef51ed906518404a809d330666ee0a8aad3f909470a933d7a2bf47a1b64f",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib14.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib15.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "a97dda4fd6675cbc7c6bfc71de2ae680c6c92658c4fb2405812c2f7666f28e25",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib15.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib16.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "71addffd0aa75ffb8b5310b264280994d6c3344fb8d899ce00a0880b629819ae",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib16.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib17.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "5cc5dff8f1b5e447def2f67423dd78094dba2a806184954e99d49990bc711dca",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib17.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib18.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "028d984c7ce131f099dfed2f8f0df675dbe8c63a7dc55e34e2ebaf3da285a4cf",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib18.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib19.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "52b92d3ad967048cf9e994b919902c075cadba9d2fcdd8c753cafdc7c7c6164f",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib19.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib2.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "34d2ef51ed906518404a809d330666ee0a8aad3f909470a933d7a2bf47a1b64f",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib2.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib20.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "3f266627463a8271b65eec87e5f3a95c562934ec3b0a155eb378b202b93ad3c1",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib20.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib21.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "5bc9678b58e4860216afc1bf0d35224af75a0992cf4caba6106db8745895f059",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib21.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib22.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "6969687f0dcead5d581626bad75cddac609c81cebd857001b69b2853b2b8e121",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib22.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib23.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "d37dbdb742ae29bf296aa00e1f223f8aa49f9144e0ce52a132d2304ac5ab273b",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib23.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib24.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "155cbe12dfa8f5316f7045733d971611b31080221f99ea8359fd2add067d5792",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib24.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib3.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "aad7d5378e3d544f531a77643dbb10722528453f3bc731a5d094774b8f4395d6",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib3.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib4.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "82bdf8b471fcf96d6f2d5d2380472299296b05aa70cdce491c07ac7d608ae5a9",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib4.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib5.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "ff17dfba6c390aba9b8b329d1f54d94df1b7f429cea6de12309912821e245b31",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib5.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib6.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "10bff68feb7337f18d083bd2bd247808d5a5a89afc15e0988ca1538178e3d8c9",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib6.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib7.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "7ee841c07b3726cef836dd5dfcf1a291cd9965396547697f794281fcc501f298",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib7.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib8.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "3cf2e324f1fc959d089efb7d910409ec3bcd0c5448d5619f54ebc4985124ec83",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib8.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/calib9.bmp",
+      "variant": "eclipse-submission",
+      "bytes": 691254,
+      "sha256": "7d94302eb9047e9df2e10ecebe9efc0ca6f432579788f833488eb57ff5ebc1b0",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/calib9.bmp",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/green.png",
+      "variant": "eclipse-submission",
+      "bytes": 2662,
+      "sha256": "1861fb5dad168bf5d8f003ac16254e00bb3e07590440afc79206f91db8a3191c",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/green.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/ic_launcher.png",
+      "variant": "eclipse-submission",
+      "bytes": 9397,
+      "sha256": "28c89918a8d235fcadf2e83bb14a6d9da9eab9e665857ad43b9f00e038f1f615",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/ic_launcher.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-hdpi/red.png",
+      "variant": "eclipse-submission",
+      "bytes": 2663,
+      "sha256": "6df86ceabc9cab07e8e40b70914f86399b19210a442667623543248a2260a3a1",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-hdpi/red.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-mdpi/app_icon.png",
+      "variant": "eclipse-submission",
+      "bytes": 2710,
+      "sha256": "a08288e4313a13c77f480e33c2f74212991fa7fa2ba4e9e6c85a29179c5e25a4",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-mdpi/app_icon.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-mdpi/ic_launcher.png",
+      "variant": "eclipse-submission",
+      "bytes": 5237,
+      "sha256": "eb2a39a5c0c475a793e8814faaaf6afa92d303ec9f1fd65696be43eafbb3260d",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-mdpi/ic_launcher.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-xhdpi/app_icon.png",
+      "variant": "eclipse-submission",
+      "bytes": 8651,
+      "sha256": "1919c751cf16fefa3518da0cc95002c2571a99ecefe7cff983f1e7eefcf8f042",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-xhdpi/app_icon.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-xhdpi/ic_launcher.png",
+      "variant": "eclipse-submission",
+      "bytes": 14383,
+      "sha256": "d9c73c0298e96e08af5c28896b8482503fce0bb9bc29696cadcbdc6e98218041",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-xhdpi/ic_launcher.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/drawable-xxhdpi/app_icon.png",
+      "variant": "eclipse-submission",
+      "bytes": 17115,
+      "sha256": "98eac18ae5a08a8b06c3f4694949945ac2e448e79dc170e966da5c6d6c2f2e77",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/drawable-xxhdpi/app_icon.png",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/layout/activity_main.xml",
+      "variant": "eclipse-submission",
+      "bytes": 505,
+      "sha256": "5212e33b178037ab1488ed9623724795e1035c1b18c6851d72737c08bb615a2e",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/layout/activity_main.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/layout/activity_mesh_view.xml",
+      "variant": "eclipse-submission",
+      "bytes": 1957,
+      "sha256": "970885c455457035d44c297b29011754886a51295126b31cc70810e05777a272",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/layout/activity_mesh_view.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/menu/main.xml",
+      "variant": "eclipse-submission",
+      "bytes": 261,
+      "sha256": "7d779cd495df7438c41e8323f4b783b152d678315aa9f62a6057681e36087098",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/menu/main.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/values-sw600dp/dimens.xml",
+      "variant": "eclipse-submission",
+      "bytes": 201,
+      "sha256": "a52ae51a993711e66df632abd523a59635ea378dc5687a88e6d509a2493c201c",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/values-sw600dp/dimens.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/values-sw720dp-land/dimens.xml",
+      "variant": "eclipse-submission",
+      "bytes": 275,
+      "sha256": "b95df5d5061d838d52f7807146dfb8c64925e5e45a2031a8e61a8bc6208d252f",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/values-sw720dp-land/dimens.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/values-v11/styles.xml",
+      "variant": "eclipse-submission",
+      "bytes": 988,
+      "sha256": "a6070b2547b03aa78ef88432d86a9876c5c6c06070ed10198878a58b53fe8f02",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/values-v11/styles.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/values/attrs.xml",
+      "variant": "eclipse-submission",
+      "bytes": 513,
+      "sha256": "1961f82ca7874a413ad61ef18314e7ef20a81b0cb2c8fa961d8c702fb4dbcbe0",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/values/attrs.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/values/colors.xml",
+      "variant": "eclipse-submission",
+      "bytes": 82,
+      "sha256": "431dbf8b96ecf1dbbccc52e7e091a2c3412ffbb7541c3f004dd756cd90cd5304",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/values/colors.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/values/dimens.xml",
+      "variant": "eclipse-submission",
+      "bytes": 218,
+      "sha256": "6c2c93fdda6a47ed8c355f9fe45cfa9610e57e83abee00caea21feec2aa0d151",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/values/dimens.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/values/strings.xml",
+      "variant": "eclipse-submission",
+      "bytes": 447,
+      "sha256": "ceacb6904abe5d47ae98380f98350f7cc78876738fd953d652fa5557dd313aea",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/values/strings.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/res/values/styles.xml",
+      "variant": "eclipse-submission",
+      "bytes": 1457,
+      "sha256": "9d20a7f514fd2560a7b294a4174c64cd52c8f1998df65d5f57d0282e0592b641",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/res/values/styles.xml",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/activities/MainActivity.java",
+      "variant": "eclipse-submission",
+      "bytes": 5520,
+      "sha256": "c3a4321aee1d5a2a02c14e17ac1ff3099dd40a39c4023146f4561d4110562409",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/activities/MainActivity.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/activities/MeshViewActivity.java",
+      "variant": "eclipse-submission",
+      "bytes": 676,
+      "sha256": "887d3109780fea6c2684fc8dfd93908a3df954ea320baff65f9b7e337b46fc57",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/activities/MeshViewActivity.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/logic/CalibrationFile.java",
+      "variant": "eclipse-submission",
+      "bytes": 1426,
+      "sha256": "edf83543fe405f9ce90072249342c627a228a330003c8da6be026ada458b5398",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/logic/CalibrationFile.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/logic/PhotoGrabber.java",
+      "variant": "eclipse-submission",
+      "bytes": 4572,
+      "sha256": "c60c1c25241b43e9cb40659709ac167dc9d610c42f26c308b80cc786be43aafe",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/logic/PhotoGrabber.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/logic/Reconstructor.java",
+      "variant": "eclipse-submission",
+      "bytes": 10758,
+      "sha256": "720351709b2c5f6219cf2779ff5bef7c09380d934d601b1625b966e9e972ad4b",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/logic/Reconstructor.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/logic/SlideShow.java",
+      "variant": "eclipse-submission",
+      "bytes": 1669,
+      "sha256": "a13b17cfc92c5ca62916f5b4ad542378d46e9ecfa1a780b49e9e181470329fa6",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/logic/SlideShow.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/logic/XMLparser.java",
+      "variant": "eclipse-submission",
+      "bytes": 1675,
+      "sha256": "70737cd48d7ed6351a28946fadf96006e6cc382c684ed2d817dff8b3349ee2ed",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/logic/XMLparser.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/mesh/logic/Mesh.java",
+      "variant": "eclipse-submission",
+      "bytes": 3015,
+      "sha256": "19667dcca4281238dc76f68cf6b9a08a2be6aad20e14389d127528695e7ff352",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/mesh/logic/Mesh.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/mesh/logic/MeshGLRenderer.java",
+      "variant": "eclipse-submission",
+      "bytes": 2686,
+      "sha256": "2d198c916bdb8befc1f4cf3969f8cb824bb5b626e389bd3705191f86ad3706c0",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/mesh/logic/MeshGLRenderer.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/mesh/logic/MeshGLSurfaceView.java",
+      "variant": "eclipse-submission",
+      "bytes": 3741,
+      "sha256": "24d372f86eec10ced39a020a3f818d25cc3d6b806d7db5f8e6635be5ef1f246f",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/mesh/logic/MeshGLSurfaceView.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "source/src/com/project/mesh/logic/Quaternion.java",
+      "variant": "eclipse-submission",
+      "bytes": 8335,
+      "sha256": "745d6e4cba6705cfaa76f4093f3a4b71040330721bba46b8c8eb1134d7c65b35",
+      "origin_kind": "rar-member",
+      "origin_path": "3D/src/com/project/mesh/logic/Quaternion.java",
+      "transformation": "none",
+      "archive_sha256": "818286352a7695f255c9cb5f5c777888c349bf191769ec0918cbd07bcee92c4f"
+    },
+    {
+      "path": "versions/eclipse-2014/.classpath",
+      "variant": "eclipse-2014",
+      "bytes": 466,
+      "sha256": "1d1f6daf6a48cefcf652440926c27ece5cd5b7ac3673c29d37a292551bcfbfa2",
+      "origin_kind": "git-blob",
+      "origin_path": ".classpath",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "d57ec025139a63edaf930e76fb988d23725f590c"
+    },
+    {
+      "path": "versions/eclipse-2014/.project",
+      "variant": "eclipse-2014",
+      "bytes": 807,
+      "sha256": "874930eb23d2a27ff10205f596358b12a80144ec42e07867f6e697f21361b42e",
+      "origin_kind": "git-blob",
+      "origin_path": ".project",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "602045c86414b5cb369b8fe8d46c071d489c88b7"
+    },
+    {
+      "path": "versions/eclipse-2014/AndroidManifest.xml",
+      "variant": "eclipse-2014",
+      "bytes": 1123,
+      "sha256": "5c49da2f3198ebb38d6d1e6b9b9af88e8d312f274676c8d4d6f7d3f55ea07dbc",
+      "origin_kind": "git-blob",
+      "origin_path": "AndroidManifest.xml",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "453d2cffff337244decbf310643739b8f26c705e"
+    },
+    {
+      "path": "versions/eclipse-2014/app_icon-web.png",
+      "variant": "eclipse-2014",
+      "bytes": 81620,
+      "sha256": "57c0fb1b7c64b3fea1f75d24ffe8594ca6a41235b621eb573279fb15d40afecf",
+      "origin_kind": "git-blob",
+      "origin_path": "app_icon-web.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "5453bdb0a936d347e9f2990dbe40cf0bb918f967"
+    },
+    {
+      "path": "versions/eclipse-2014/proguard-project.txt",
+      "variant": "eclipse-2014",
+      "bytes": 781,
+      "sha256": "9d28f3345f50cb6970293f841ddf6b7d9962c3759495b489f04ce8922ca5abb6",
+      "origin_kind": "git-blob",
+      "origin_path": "proguard-project.txt",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "f2fe1559a217865a5454add526dcc446f892385b"
+    },
+    {
+      "path": "versions/eclipse-2014/project.properties",
+      "variant": "eclipse-2014",
+      "bytes": 584,
+      "sha256": "44580cc481de6ca19810d2cbadf69a46ed50487ba1fcfc3a8fd3b968d6ec24db",
+      "origin_kind": "git-blob",
+      "origin_path": "project.properties",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "afc52f866f03e946436bde7873e69a6f33e8347e"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/app_icon.png",
+      "variant": "eclipse-2014",
+      "bytes": 5535,
+      "sha256": "da6e3db532bbe855f1345d8f527366d48feb7c89d5f396f4ba2a87df93600e42",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/app_icon.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "4f08c29ddbb94dc4fa56e6b280892eb88ae542dd"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/blue.png",
+      "variant": "eclipse-2014",
+      "bytes": 2661,
+      "sha256": "ccf792e7c7f1e6b35ac364f065beee57c03d5c9c8859e846232d76a8e56c74ed",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/blue.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "7326cec1386fdc609742a9a0120f661c27f5ca86"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib1.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "aad7d5378e3d544f531a77643dbb10722528453f3bc731a5d094774b8f4395d6",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib1.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "aa2a06f3f236643fd640ba1c76bf6207393372cf"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib10.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "05b668c917e550d73787e7d6594888988c3704da246137dbcfb1aa8191343f2f",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib10.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "59dfc7391bd8ecce073186bdf0992ef71df7240d"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib11.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "e6994e86ac9539479bb852955d0c844a963cf5ff51593c40238f80a9e79dd438",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib11.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "11f7f04ef20ea17995e4c5c524688d77794a257c"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib12.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "fb28d16ca1396cb2028add461a5b999a11361be9df407c55fc7113d61ac37864",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib12.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "e2de3b70becf2724a2d35ab9812ef0397eaf2e20"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib13.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "aad7d5378e3d544f531a77643dbb10722528453f3bc731a5d094774b8f4395d6",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib13.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "aa2a06f3f236643fd640ba1c76bf6207393372cf"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib14.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "34d2ef51ed906518404a809d330666ee0a8aad3f909470a933d7a2bf47a1b64f",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib14.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "813358c2d2cfbbd39af5755d67c7bf29935013b5"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib15.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "a97dda4fd6675cbc7c6bfc71de2ae680c6c92658c4fb2405812c2f7666f28e25",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib15.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "5c1221facc1abb125b962d9c5c2d7933e4784695"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib16.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "71addffd0aa75ffb8b5310b264280994d6c3344fb8d899ce00a0880b629819ae",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib16.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "861bb6640184987d634ba5e9101caa77a2f80d49"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib17.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "5cc5dff8f1b5e447def2f67423dd78094dba2a806184954e99d49990bc711dca",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib17.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "ab213627d115ac160380ac67dea8388b38e97beb"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib18.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "028d984c7ce131f099dfed2f8f0df675dbe8c63a7dc55e34e2ebaf3da285a4cf",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib18.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "7f42d3c64a3a634a49e9493f1f7843efad75ac28"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib19.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "52b92d3ad967048cf9e994b919902c075cadba9d2fcdd8c753cafdc7c7c6164f",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib19.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "f0455f93360316027022283d96ae328a1cfd04e7"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib2.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "34d2ef51ed906518404a809d330666ee0a8aad3f909470a933d7a2bf47a1b64f",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib2.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "813358c2d2cfbbd39af5755d67c7bf29935013b5"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib20.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "3f266627463a8271b65eec87e5f3a95c562934ec3b0a155eb378b202b93ad3c1",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib20.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "fb030b6251cc18d2c27b5dda5a4b1b7713add76f"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib21.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "5bc9678b58e4860216afc1bf0d35224af75a0992cf4caba6106db8745895f059",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib21.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "a1649fa7806dd4f35c0890ae5a1c79e84aba2280"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib22.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "6969687f0dcead5d581626bad75cddac609c81cebd857001b69b2853b2b8e121",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib22.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "235a6b70f136854e1446275b7a764e9fa92c8fc4"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib23.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "d37dbdb742ae29bf296aa00e1f223f8aa49f9144e0ce52a132d2304ac5ab273b",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib23.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "2e3b01f456c77eca12233479309ac9ab5f5408d0"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib24.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "155cbe12dfa8f5316f7045733d971611b31080221f99ea8359fd2add067d5792",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib24.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "ba9198443d8c3f66fa0897c1a270ef1ceb02827e"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib3.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "aad7d5378e3d544f531a77643dbb10722528453f3bc731a5d094774b8f4395d6",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib3.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "aa2a06f3f236643fd640ba1c76bf6207393372cf"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib4.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "82bdf8b471fcf96d6f2d5d2380472299296b05aa70cdce491c07ac7d608ae5a9",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib4.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "b1d18d5512ce320d65ac0cb5a896ff36091092ea"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib5.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "ff17dfba6c390aba9b8b329d1f54d94df1b7f429cea6de12309912821e245b31",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib5.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "b8ab33e1dacbb68e5a458c72c9936e675976b7b4"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib6.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "10bff68feb7337f18d083bd2bd247808d5a5a89afc15e0988ca1538178e3d8c9",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib6.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "23dcd2bb74903f0cf49e6e7ae9ed045ecfb906e2"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib7.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "7ee841c07b3726cef836dd5dfcf1a291cd9965396547697f794281fcc501f298",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib7.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "8cb2e65c657b6cba425b6be390bc64399325bf50"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib8.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "3cf2e324f1fc959d089efb7d910409ec3bcd0c5448d5619f54ebc4985124ec83",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib8.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "684aa90bdd080298e874cf5efa44244b8501ea8a"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/calib9.bmp",
+      "variant": "eclipse-2014",
+      "bytes": 691254,
+      "sha256": "7d94302eb9047e9df2e10ecebe9efc0ca6f432579788f833488eb57ff5ebc1b0",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/calib9.bmp",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "713607ace7aa3c0c351731d2e2aa81aa0e95a6ee"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/green.png",
+      "variant": "eclipse-2014",
+      "bytes": 2662,
+      "sha256": "1861fb5dad168bf5d8f003ac16254e00bb3e07590440afc79206f91db8a3191c",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/green.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "6e75ae69dec119f3b745cde7aaeaa6a1d708a1e2"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/ic_launcher.png",
+      "variant": "eclipse-2014",
+      "bytes": 9397,
+      "sha256": "28c89918a8d235fcadf2e83bb14a6d9da9eab9e665857ad43b9f00e038f1f615",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/ic_launcher.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "96a442e5b8e9394ccf50bab9988cb2316026245d"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-hdpi/red.png",
+      "variant": "eclipse-2014",
+      "bytes": 2663,
+      "sha256": "6df86ceabc9cab07e8e40b70914f86399b19210a442667623543248a2260a3a1",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-hdpi/red.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "690efe2ed07b0eaa35e59a7173fc1e307d1a8eb8"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-mdpi/app_icon.png",
+      "variant": "eclipse-2014",
+      "bytes": 2710,
+      "sha256": "a08288e4313a13c77f480e33c2f74212991fa7fa2ba4e9e6c85a29179c5e25a4",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-mdpi/app_icon.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "944187367a359dcd6f1c77406724fa3800a2fcc8"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-mdpi/ic_launcher.png",
+      "variant": "eclipse-2014",
+      "bytes": 5237,
+      "sha256": "eb2a39a5c0c475a793e8814faaaf6afa92d303ec9f1fd65696be43eafbb3260d",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-mdpi/ic_launcher.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "359047dfa4ed206e41e2354f9c6b307e713efe32"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-xhdpi/app_icon.png",
+      "variant": "eclipse-2014",
+      "bytes": 8651,
+      "sha256": "1919c751cf16fefa3518da0cc95002c2571a99ecefe7cff983f1e7eefcf8f042",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-xhdpi/app_icon.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "97787da05510ed03e473f1b608eaa247d09bf332"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-xhdpi/ic_launcher.png",
+      "variant": "eclipse-2014",
+      "bytes": 14383,
+      "sha256": "d9c73c0298e96e08af5c28896b8482503fce0bb9bc29696cadcbdc6e98218041",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-xhdpi/ic_launcher.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "71c6d760f05183ef8a47c614d8d13380c8528499"
+    },
+    {
+      "path": "versions/eclipse-2014/res/drawable-xxhdpi/app_icon.png",
+      "variant": "eclipse-2014",
+      "bytes": 17115,
+      "sha256": "98eac18ae5a08a8b06c3f4694949945ac2e448e79dc170e966da5c6d6c2f2e77",
+      "origin_kind": "git-blob",
+      "origin_path": "res/drawable-xxhdpi/app_icon.png",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "7d469697c598b55e3c6d7e0b185394ae5027932c"
+    },
+    {
+      "path": "versions/eclipse-2014/res/layout/activity_main.xml",
+      "variant": "eclipse-2014",
+      "bytes": 492,
+      "sha256": "1b843eabad40588eb923e33c27561c88958d488dd87cc21801abd8794a23853c",
+      "origin_kind": "git-blob",
+      "origin_path": "res/layout/activity_main.xml",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "5a5e8fd8b50ca0d26f552812b04a60b53924a5e2"
+    },
+    {
+      "path": "versions/eclipse-2014/res/menu/main.xml",
+      "variant": "eclipse-2014",
+      "bytes": 253,
+      "sha256": "a5b98cf817c54fa312649829f0900e3fd29a06f42b42cfb2e4090753dceb4413",
+      "origin_kind": "git-blob",
+      "origin_path": "res/menu/main.xml",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "d227c4927c4a60154eb3ce8134ebf27c2466e321"
+    },
+    {
+      "path": "versions/eclipse-2014/res/values-sw600dp/dimens.xml",
+      "variant": "eclipse-2014",
+      "bytes": 195,
+      "sha256": "f7158ca21a6fe5c4b87fe0f7270c1042eaa79afd098c2436e8291da5c871a209",
+      "origin_kind": "git-blob",
+      "origin_path": "res/values-sw600dp/dimens.xml",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "1ba777d65dce461a5a7a647ac378b34c9a9b1b4b"
+    },
+    {
+      "path": "versions/eclipse-2014/res/values-sw720dp-land/dimens.xml",
+      "variant": "eclipse-2014",
+      "bytes": 268,
+      "sha256": "a08649517354e6a7751b0e566142165c1cd71ff26e67192080bd5a860345fe79",
+      "origin_kind": "git-blob",
+      "origin_path": "res/values-sw720dp-land/dimens.xml",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "eee741a51068e1e1fc1251c787d50b56dd6c301f"
+    },
+    {
+      "path": "versions/eclipse-2014/res/values-v11/styles.xml",
+      "variant": "eclipse-2014",
+      "bytes": 323,
+      "sha256": "432ef6b97fc7b4f2c8c5bef9fec22c50b88faf56a8c47e068a114b4cde29c3e7",
+      "origin_kind": "git-blob",
+      "origin_path": "res/values-v11/styles.xml",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "541752f6edf47a27cad70a23c00cc17aa4c84c08"
+    },
+    {
+      "path": "versions/eclipse-2014/res/values/dimens.xml",
+      "variant": "eclipse-2014",
+      "bytes": 212,
+      "sha256": "c2ad685db2bc257eac76d80f4f59c621de6800c61d4a1369acc37f1fdabbbf56",
+      "origin_kind": "git-blob",
+      "origin_path": "res/values/dimens.xml",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "a6dd14032e4d7247d1c4c1eb4f50e71fefd207a4"
+    },
+    {
+      "path": "versions/eclipse-2014/res/values/strings.xml",
+      "variant": "eclipse-2014",
+      "bytes": 257,
+      "sha256": "4b461d0fa71fb6925b567d147769abc951ff5532b1584bf6e7ef1973b7d9481f",
+      "origin_kind": "git-blob",
+      "origin_path": "res/values/strings.xml",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "a392eb182520f86e392ae4188956ddc497817b74"
+    },
+    {
+      "path": "versions/eclipse-2014/res/values/styles.xml",
+      "variant": "eclipse-2014",
+      "bytes": 679,
+      "sha256": "26de536abf5d354d1226447c6c18608afde185c0e6c16d0987cea4548c76dce9",
+      "origin_kind": "git-blob",
+      "origin_path": "res/values/styles.xml",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "4a10ca492dd2610011d3979b4dc551f471fa27ab"
+    },
+    {
+      "path": "versions/eclipse-2014/src/com/example/dv1/CalibrationFile.java",
+      "variant": "eclipse-2014",
+      "bytes": 1371,
+      "sha256": "6981ac9405818e7061dffe4fc5327d06ef18174ed04016a728c2703e57e2c9cf",
+      "origin_kind": "git-blob",
+      "origin_path": "src/com/example/dv1/CalibrationFile.java",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "803c1dd537e33aac179118aa066437941602ac92"
+    },
+    {
+      "path": "versions/eclipse-2014/src/com/example/dv1/MainActivity.java",
+      "variant": "eclipse-2014",
+      "bytes": 4063,
+      "sha256": "8f6f2bd4245c21659e594656225ae7e934db09740ee0638a16c9fa689f67d5b0",
+      "origin_kind": "git-blob",
+      "origin_path": "src/com/example/dv1/MainActivity.java",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "3643a5cba3332c38a2789a8615bc01037be884c1"
+    },
+    {
+      "path": "versions/eclipse-2014/src/com/example/dv1/PhotoGrabber.java",
+      "variant": "eclipse-2014",
+      "bytes": 4287,
+      "sha256": "aa93f863ab0d9b79b6d58464843ad588284462df3751d99cbfbf7629c650cc99",
+      "origin_kind": "git-blob",
+      "origin_path": "src/com/example/dv1/PhotoGrabber.java",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "92632a4dd3b3d82a68dd09a93666bad53c3419cd"
+    },
+    {
+      "path": "versions/eclipse-2014/src/com/example/dv1/Reconstructor.java",
+      "variant": "eclipse-2014",
+      "bytes": 8460,
+      "sha256": "739e70412be6feb051150e5f403a6528075eec945b0f3b60d15df3cdb93a6d50",
+      "origin_kind": "git-blob",
+      "origin_path": "src/com/example/dv1/Reconstructor.java",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "6ffba88bb9f11ef9e144d80c4412ddbb672b6d2f"
+    },
+    {
+      "path": "versions/eclipse-2014/src/com/example/dv1/SlideShow.java",
+      "variant": "eclipse-2014",
+      "bytes": 1546,
+      "sha256": "8b001410c254fa3e7c3fdc0d8e7799d2ec7eb3ca012ba95ada8c65869dfe07ea",
+      "origin_kind": "git-blob",
+      "origin_path": "src/com/example/dv1/SlideShow.java",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "84a43665a3a769a190b056f6031ae4c1a4fc7fa9"
+    },
+    {
+      "path": "versions/eclipse-2014/src/com/example/dv1/XMLparser.java",
+      "variant": "eclipse-2014",
+      "bytes": 1604,
+      "sha256": "43196540e55c8e593c846202840bad381192ba1c057b555dfaec3602bd1b27d0",
+      "origin_kind": "git-blob",
+      "origin_path": "src/com/example/dv1/XMLparser.java",
+      "transformation": "none",
+      "commit": "90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d",
+      "git_blob": "47b7d7b3a96943f510bdcea5fe97ad702fb5fcec"
+    },
+    {
+      "path": "versions/android-studio/app/build.gradle",
+      "variant": "android-studio",
+      "bytes": 463,
+      "sha256": "6f3b5321d3d55cbc9dd98adc48ac8d9dee3ce69e0ea44417edaf6ac8b5de25ec",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/build.gradle",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/AndroidManifest.xml",
+      "variant": "android-studio",
+      "bytes": 1293,
+      "sha256": "7b38e1f5b5f68082fe5ecb09fadf91635e2cc7b491e69285d87b410c1ab47b51",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/AndroidManifest.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/activities/MainActivity.java",
+      "variant": "android-studio",
+      "bytes": 6226,
+      "sha256": "5addf76fb1eca41a12a721c42e906e761912e859239b6e97588926ff554ed937",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/activities/MainActivity.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/activities/MeshViewActivity.java",
+      "variant": "android-studio",
+      "bytes": 676,
+      "sha256": "887d3109780fea6c2684fc8dfd93908a3df954ea320baff65f9b7e337b46fc57",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/activities/MeshViewActivity.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/logic/CalibrationFile.java",
+      "variant": "android-studio",
+      "bytes": 1426,
+      "sha256": "edf83543fe405f9ce90072249342c627a228a330003c8da6be026ada458b5398",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/logic/CalibrationFile.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/logic/PhotoGrabber.java",
+      "variant": "android-studio",
+      "bytes": 5853,
+      "sha256": "862e901706b1e56050ca1831cb84fa270e76f7d8d66a48d33f636e5f588741e2",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/logic/PhotoGrabber.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/logic/Reconstructor.java",
+      "variant": "android-studio",
+      "bytes": 11507,
+      "sha256": "b85bcb618faa5af1e5db391182402b1fd73c995e3807927357d975fddf6c1bfa",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/logic/Reconstructor.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/logic/SlideShow.java",
+      "variant": "android-studio",
+      "bytes": 2223,
+      "sha256": "0c51e70c94cb8f6f39a2fdfe645c1e2ec1022943eaca6c38f1f1fe279a9900af",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/logic/SlideShow.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/logic/XMLparser.java",
+      "variant": "android-studio",
+      "bytes": 1675,
+      "sha256": "70737cd48d7ed6351a28946fadf96006e6cc382c684ed2d817dff8b3349ee2ed",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/logic/XMLparser.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/mesh/logic/Mesh.java",
+      "variant": "android-studio",
+      "bytes": 3149,
+      "sha256": "9fa18ea47ebc4a7e1a21b5e901d803e4bb2fe1534b604f24d2589757662548eb",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/mesh/logic/Mesh.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/mesh/logic/MeshGLRenderer.java",
+      "variant": "android-studio",
+      "bytes": 3006,
+      "sha256": "aea1a17be0047e77b25eb32849dcd3e91c0de2966658437f69256eed6b086838",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/mesh/logic/MeshGLRenderer.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/mesh/logic/MeshGLSurfaceView.java",
+      "variant": "android-studio",
+      "bytes": 3742,
+      "sha256": "d1820d8b227a3ef220618f28863c8d2f4a0f75d11cc712ccbd92cd2b4f0c9116",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/mesh/logic/MeshGLSurfaceView.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/java/com/project/mesh/logic/Quaternion.java",
+      "variant": "android-studio",
+      "bytes": 8335,
+      "sha256": "745d6e4cba6705cfaa76f4093f3a4b71040330721bba46b8c8eb1134d7c65b35",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/java/com/project/mesh/logic/Quaternion.java",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/app_icon.png",
+      "variant": "android-studio",
+      "bytes": 5535,
+      "sha256": "da6e3db532bbe855f1345d8f527366d48feb7c89d5f396f4ba2a87df93600e42",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/app_icon.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/blue.png",
+      "variant": "android-studio",
+      "bytes": 2661,
+      "sha256": "ccf792e7c7f1e6b35ac364f065beee57c03d5c9c8859e846232d76a8e56c74ed",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/blue.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib1.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "2c498ce453b957543f182fb252388222f23f85b802b4d2171395ae1bb5951403",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib1.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib10.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "41ddb61e5e47fc5e7541a5fc6089ce7300d536fb9348814744d28c9cd453586d",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib10.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib11.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "5a79028fcba4cefe7280f688056be3a64c6e965a0cb184a579d0c2de1dccc4e9",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib11.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib12.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "b6d0b1f7d251b1afc59f2591e3ba076e7fee2d4f473d89d9c5e2bdf3758a4fb4",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib12.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib13.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "2c498ce453b957543f182fb252388222f23f85b802b4d2171395ae1bb5951403",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib13.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib14.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "7d59d7ce4354e7da9f475c4c35879d9aeb01e76693b5fa4f21d28c35c0839e44",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib14.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib15.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "b3caf520d42a654e96e825667b6aec5214751b806648c8b69fcd83966120a004",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib15.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib16.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "8de54cbb4cdb3d844a41cbf4d1c5fc34bd87931a559782cff1d749268b2e6fce",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib16.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib17.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "a6066d053a8396ac95ce14bb6e761798bbde7cb845628b8734a0dca4d5ba3ba1",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib17.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib18.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "05dd8b783de4fe70d58482ddbd0718875ec1a842e052bb65810dcb620dc09043",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib18.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib19.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "27db1ff35fd5af6400d55757d09032eb77101682b4e732ce4de939db58934454",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib19.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib2.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "7d59d7ce4354e7da9f475c4c35879d9aeb01e76693b5fa4f21d28c35c0839e44",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib2.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib20.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "dc22cbb9d90ca0d0d8829c7ef62d728b85d7b59e990bd45303b98bacd17a0fa4",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib20.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib21.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "fbcebfe31a409d1590f3119ed153a07739613a3a94c3599021296da76a033c51",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib21.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib22.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "2cfb8fc5c6d99dc78f266956e3b0b4575ff101585e490390072fccad60fa1322",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib22.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib23.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "f530c4e6f2a18694bd15b101108c0b93a9be95c3b56b25fc436d1089a1a0e1c4",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib23.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib24.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "f82299cfb048ab9ad309379a4b59665658b698aed78edd48ad84d35ff76da3f5",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib24.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib3.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "2c498ce453b957543f182fb252388222f23f85b802b4d2171395ae1bb5951403",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib3.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib4.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "85fe4d1ccfbd10dc72efd06e145da07b723547fc1b8f006e2e638fc850aceda4",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib4.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib5.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "975d29884716960784dccc74baa896117afd07c5b02ed3fd3fdee0281c5ed773",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib5.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib6.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "44a9375968de3eea194be200401fdf2ccaf9e8cc8fd9d59ec576213c17ca7843",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib6.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib7.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "91750b44b4c1eb9caa2deb77b22ee41b6b2c42e7cfcb9c54fe64a9635f9d21e3",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib7.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib8.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "69ef6afb0dc02b28d90008759c6d63a7ccac4035627b826951e369157d2e02ad",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib8.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/calib9.bmp",
+      "variant": "android-studio",
+      "bytes": 1536054,
+      "sha256": "8ca32ba5052b1b149f7a488731353abc65bad036749ee4d63968af9015bbc373",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/calib9.bmp",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/green.png",
+      "variant": "android-studio",
+      "bytes": 2662,
+      "sha256": "1861fb5dad168bf5d8f003ac16254e00bb3e07590440afc79206f91db8a3191c",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/green.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/ic_launcher.png",
+      "variant": "android-studio",
+      "bytes": 9397,
+      "sha256": "28c89918a8d235fcadf2e83bb14a6d9da9eab9e665857ad43b9f00e038f1f615",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/ic_launcher.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-hdpi/red.png",
+      "variant": "android-studio",
+      "bytes": 2663,
+      "sha256": "6df86ceabc9cab07e8e40b70914f86399b19210a442667623543248a2260a3a1",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-hdpi/red.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-mdpi/app_icon.png",
+      "variant": "android-studio",
+      "bytes": 2710,
+      "sha256": "a08288e4313a13c77f480e33c2f74212991fa7fa2ba4e9e6c85a29179c5e25a4",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-mdpi/app_icon.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-mdpi/ic_launcher.png",
+      "variant": "android-studio",
+      "bytes": 5237,
+      "sha256": "eb2a39a5c0c475a793e8814faaaf6afa92d303ec9f1fd65696be43eafbb3260d",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-mdpi/ic_launcher.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-xhdpi/app_icon.png",
+      "variant": "android-studio",
+      "bytes": 8651,
+      "sha256": "1919c751cf16fefa3518da0cc95002c2571a99ecefe7cff983f1e7eefcf8f042",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-xhdpi/app_icon.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-xhdpi/ic_launcher.png",
+      "variant": "android-studio",
+      "bytes": 14383,
+      "sha256": "d9c73c0298e96e08af5c28896b8482503fce0bb9bc29696cadcbdc6e98218041",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-xhdpi/ic_launcher.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/drawable-xxhdpi/app_icon.png",
+      "variant": "android-studio",
+      "bytes": 17115,
+      "sha256": "98eac18ae5a08a8b06c3f4694949945ac2e448e79dc170e966da5c6d6c2f2e77",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/drawable-xxhdpi/app_icon.png",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/layout/activity_main.xml",
+      "variant": "android-studio",
+      "bytes": 505,
+      "sha256": "5212e33b178037ab1488ed9623724795e1035c1b18c6851d72737c08bb615a2e",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/layout/activity_main.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/layout/activity_mesh_view.xml",
+      "variant": "android-studio",
+      "bytes": 1957,
+      "sha256": "970885c455457035d44c297b29011754886a51295126b31cc70810e05777a272",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/layout/activity_mesh_view.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/menu/main.xml",
+      "variant": "android-studio",
+      "bytes": 261,
+      "sha256": "7d779cd495df7438c41e8323f4b783b152d678315aa9f62a6057681e36087098",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/menu/main.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/values-sw600dp/dimens.xml",
+      "variant": "android-studio",
+      "bytes": 201,
+      "sha256": "a52ae51a993711e66df632abd523a59635ea378dc5687a88e6d509a2493c201c",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/values-sw600dp/dimens.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/values-sw720dp-land/dimens.xml",
+      "variant": "android-studio",
+      "bytes": 275,
+      "sha256": "b95df5d5061d838d52f7807146dfb8c64925e5e45a2031a8e61a8bc6208d252f",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/values-sw720dp-land/dimens.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/values-v11/styles.xml",
+      "variant": "android-studio",
+      "bytes": 988,
+      "sha256": "a6070b2547b03aa78ef88432d86a9876c5c6c06070ed10198878a58b53fe8f02",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/values-v11/styles.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/values/attrs.xml",
+      "variant": "android-studio",
+      "bytes": 513,
+      "sha256": "1961f82ca7874a413ad61ef18314e7ef20a81b0cb2c8fa961d8c702fb4dbcbe0",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/values/attrs.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/values/colors.xml",
+      "variant": "android-studio",
+      "bytes": 82,
+      "sha256": "431dbf8b96ecf1dbbccc52e7e091a2c3412ffbb7541c3f004dd756cd90cd5304",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/values/colors.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/values/dimens.xml",
+      "variant": "android-studio",
+      "bytes": 218,
+      "sha256": "6c2c93fdda6a47ed8c355f9fe45cfa9610e57e83abee00caea21feec2aa0d151",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/values/dimens.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/values/strings.xml",
+      "variant": "android-studio",
+      "bytes": 447,
+      "sha256": "ceacb6904abe5d47ae98380f98350f7cc78876738fd953d652fa5557dd313aea",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/values/strings.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/app/src/main/res/values/styles.xml",
+      "variant": "android-studio",
+      "bytes": 1457,
+      "sha256": "9d20a7f514fd2560a7b294a4174c64cd52c8f1998df65d5f57d0282e0592b641",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/app/src/main/res/values/styles.xml",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/build.gradle",
+      "variant": "android-studio",
+      "bytes": 301,
+      "sha256": "96a7a227a4454f0dfefb3677956e8269d59df58bace0bb894c1f775cf8ee2ccc",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/build.gradle",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/gradle/wrapper/gradle-wrapper.properties",
+      "variant": "android-studio",
+      "bytes": 232,
+      "sha256": "62972b41a2589480b640d138653b084d1422edc56e5740235dcfee83712c08a5",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/gradle/wrapper/gradle-wrapper.properties",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/gradlew",
+      "variant": "android-studio",
+      "bytes": 5080,
+      "sha256": "874d75d37bf38c810a8314e0b2f78a3c77fce9437963ae33cec8543d92662b61",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/gradlew",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/gradlew.bat",
+      "variant": "android-studio",
+      "bytes": 2404,
+      "sha256": "c13c6e91b9a517783976de213d46398c661ea9e17651376d7301e839eaedcc62",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/gradlew.bat",
+      "transformation": "none"
+    },
+    {
+      "path": "versions/android-studio/settings.gradle",
+      "variant": "android-studio",
+      "bytes": 58,
+      "sha256": "367172a3ca0b50bdb53f05347a2ffde8de42e8913c4ed2a7d428acaf59ea8f0c",
+      "origin_kind": "backup-file",
+      "origin_path": "AndroidStudioImport/3D/settings.gradle",
+      "transformation": "none"
+    },
+    {
+      "path": "related/ios-fusion/viewer/FusionRenderer.mm",
+      "variant": "related-ios-fusion",
+      "bytes": 30938,
+      "sha256": "635d5a16477a24125f32ec4c5fe24cb2071f82d424add8a5d07ee6117d333317",
+      "origin_kind": "backup-file",
+      "origin_path": "Fusion/viewer/FusionRenderer.mm",
+      "transformation": "none"
+    }
+  ]
+}

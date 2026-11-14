@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-14",
+  "compiler": "OpenJDK javac 21.0.11 (ARM64)",
+  "source_instances_compiled": 5,
+  "independent_recovery_audit": true,
+  "application_sources_executed": false,
+  "android_or_opencv_linking_checked": false,
+  "results": [
+    {
+      "variant": "eclipse-submission",
+      "check": "javac pure Java helpers only",
+      "command_template": [
+        "javac",
+        "-d",
+        "EXTERNAL_OUTPUT",
+        "source/src/com/project/logic/CalibrationFile.java",
+        "source/src/com/project/mesh/logic/Quaternion.java"
+      ],
+      "exit_code": 0,
+      "diagnostics": "",
+      "files": [
+        {
+          "path": "source/src/com/project/logic/CalibrationFile.java",
+          "sha256": "edf83543fe405f9ce90072249342c627a228a330003c8da6be026ada458b5398"
+        },
+        {
+          "path": "source/src/com/project/mesh/logic/Quaternion.java",
+          "sha256": "745d6e4cba6705cfaa76f4093f3a4b71040330721bba46b8c8eb1134d7c65b35"
+        }
+      ]
+    },
+    {
+      "variant": "android-studio",
+      "check": "javac pure Java helpers only",
+      "command_template": [
+        "javac",
+        "-d",
+        "EXTERNAL_OUTPUT",
+        "versions/android-studio/app/src/main/java/com/project/logic/CalibrationFile.java",
+        "versions/android-studio/app/src/main/java/com/project/mesh/logic/Quaternion.java"
+      ],
+      "exit_code": 0,
+      "diagnostics": "",
+      "files": [
+        {
+          "path": "versions/android-studio/app/src/main/java/com/project/logic/CalibrationFile.java",
+          "sha256": "edf83543fe405f9ce90072249342c627a228a330003c8da6be026ada458b5398"
+        },
+        {
+          "path": "versions/android-studio/app/src/main/java/com/project/mesh/logic/Quaternion.java",
+          "sha256": "745d6e4cba6705cfaa76f4093f3a4b71040330721bba46b8c8eb1134d7c65b35"
+        }
+      ]
+    },
+    {
+      "variant": "eclipse-2014",
+      "check": "javac pure Java helpers only",
+      "command_template": [
+        "javac",
+        "-d",
+        "EXTERNAL_OUTPUT",
+        "versions/eclipse-2014/src/com/example/dv1/CalibrationFile.java"
+      ],
+      "exit_code": 0,
+      "diagnostics": "",
+      "files": [
+        {
+          "path": "versions/eclipse-2014/src/com/example/dv1/CalibrationFile.java",
+          "sha256": "6981ac9405818e7061dffe4fc5327d06ef18174ed04016a728c2703e57e2c9cf"
+        }
+      ]
+    }
+  ]
+}

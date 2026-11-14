@@ -6,43 +6,49 @@
 
 ![Platform: Android (Samsung Galaxy Beam)](https://img.shields.io/badge/platform-Android%20%28Galaxy%20Beam%29-lightgrey)
 ![Code: Java + OpenCV for Android](https://img.shields.io/badge/code-Java%20%2B%20OpenCV%20for%20Android-blue)
-![Source: partial snapshot](https://img.shields.io/badge/source-partial%20snapshot-orange)
+![Source: recovered historical versions](https://img.shields.io/badge/source-recovered%20historical%20versions-blue)
 
-A historical student project for structured-light 3D reconstruction using a Samsung Galaxy Beam and a prism to align its projector with the camera's field of view.
+Historical structured-light 3D reconstruction using a Samsung Galaxy Beam and a prism to align its projector with the camera's field of view. Source, configuration and projection resources from three Android versions are preserved here. These are archival snapshots; a complete application build and hardware capture have not been verified.
 
-Students: Arkadi Godlin, Alex Kligman.
+Students: Arkadi Godlin, Alex Kligman. Lab engineer: Alon Zvirin (historical website spelling: Alon Zivrin). Supervision: Aaron Wetzler.
 
-Lab engineer: Alon Zvirin (historical website spelling: Alon Zivrin).
+## Recovered versions
 
-Supervision: Aaron Wetzler.
+| Location | Recovered files | Contents |
+| --- | ---: | --- |
+| [`source/`](source/) | 62 | Submitted Eclipse app: 11 Java files, XML/configuration and 35 pattern/icon images. The original published 27 files remain byte-for-byte unchanged. |
+| [`versions/eclipse-2014/`](versions/eclipse-2014/) | 54 | Earlier `com.example.dv1` layout from Git commit `90ee4ef65ec90afa38a4798b6dd9ffaa29efd40d`, dated 23 February 2014; six Java files plus XML/configuration and images. |
+| [`versions/android-studio/`](versions/android-studio/) | 63 | Later `com.project` app import: 11 Java files, app resources, Gradle descriptions and wrapper scripts. Dependency modules and the binary wrapper JAR are excluded. |
+| [`related/ios-fusion/`](related/ios-fusion/) | 1 source file | Related Objective-C++ renderer fragment, credited in its header to Rom Herskovitz / Technion. Its location in the same backup establishes association only; it is not a restored iOS scanner or an Android version. |
 
-## Available source
+The 180 recovered file instances include repeated files retained in their original version layouts. They are not 180 distinct algorithms or Java classes. Each original file has a byte count, SHA-256 and relative source reference in the [recovery manifest](recovery/manifest.json). Read [version provenance and exclusions](docs/RECOVERY.md) before combining files across versions.
 
-This is a partial historical submission, not a runnable Android release. [`source/`](source/) contains 27 recovered text files: 11 Java files, XML resources, the manifest and the original Eclipse/Android configuration. All 27 files are byte-identical to the recovered originals, as checked with SHA-256.
+## What the Android code does
 
-The capture code projects a sequence of patterns and collects camera frames in NV21/YUV format. [`Reconstructor.java`](source/src/com/project/logic/Reconstructor.java) decodes the projected stripe patterns, corrects camera coordinates using calibration parameters, and computes X, Y and Z arrays. It clears invalid values and median-filters Z, then passes an interleaved coordinate buffer to the OpenGL view, which draws points. Despite the `MeshViewActivity` name, this renderer uses `GL_POINTS`; it does not establish a triangle-mesh export workflow. The reconstruction routine also attempts to write diagnostic BMP images under external storage's `Project/Decode/` directory.
+The capture interface projects a sequence of stripe patterns and collects camera frames. [`source/src/com/project/logic/Reconstructor.java`](source/src/com/project/logic/Reconstructor.java) decodes those patterns, corrects camera coordinates using calibration parameters, computes XYZ arrays, removes invalid values and median-filters depth. Its interleaved coordinates feed an OpenGL point display: the `MeshViewActivity` name does not establish a triangle-mesh export workflow. Diagnostic BMP writing targets external storage's `Project/Decode/` directory.
 
-## Setup requirements
+The older six-class Eclipse implementation and the later Android Studio import are preserved separately. Studio adds image-buffer handling and `NormalizeDecodedValues`; these historical changes have not been validated as improvements. Each Android version retains 24 synthetic projection BMPs. The submitted/earlier patterns are 360 × 640 pixels; Studio's are 480 × 800. They are projection patterns, not captured scene images or reconstruction results.
 
-The historical application requires a Samsung Galaxy Beam, a prism aligning the projector and camera, calibration data, and an Eclipse/ADT Android project with OpenCV for Android. The manifest sets minimum API 8 and target API 11. `project.properties` references OpenCV Library 2.4.4, while `MainActivity` requests OpenCV Manager 2.4.3. That mismatch remains unresolved.
+## Dependencies and checking
 
-The launcher is `com.project.activities.MainActivity`. It expects `Project/config.xml` and `Project/calibration_CB_Ex.log` below external storage. A historical build would also need the omitted OpenCV/support libraries and application assets. Calibration and decode data, raw datasets, SDK binaries, APK/class outputs, original Git history and IDE user state are excluded. Project reports are not included.
+Capture requires the Galaxy Beam/prism geometry and matching camera/projector calibration. The submitted app expects `Project/config.xml` and `Project/calibration_CB_Ex.log` on external storage. OpenCV/support libraries, calibration/capture datasets, raw XYZ arrays, SDK binaries and generated/compiled outputs are excluded. The Eclipse and Studio dependency versions also differ; see [buildability and missing requirements](docs/BUILDABILITY.md).
 
-No verified build command or complete configuration is available. Restoring dependencies alone is insufficient: capture also needs the projector/camera geometry and calibration associated with the physical setup.
+Run the offline integrity/resource check with Python 3:
 
-## Validation and limitations
+```sh
+python3 tools/verify_recovery.py
+```
 
-A private recovery manifest (not published) records the file-hash comparison for all 27 included files. The documentation review inspected the capture, reconstruction and display paths and their project configuration. No recovered code or binary was compiled or executed, and no successful reconstruction, accuracy measurement or modern Android compatibility is claimed.
-
-## Links
-
-- [Project entry on Aaron Wetzler's website](https://twerdster.github.io/#3d-scanner-on-android)
+[Static-check results](validation/static-checks.json) verify all 180 original hashes, 104 images, 30 XML resource files plus three manifests, Android activity classes and local Java resource references. Five pure-Java helper file instances also [compile with OpenJDK 21](validation/java-helpers.json). These checks do not build an APK, link OpenCV, exercise the camera/projector or measure reconstruction accuracy. No modern Android compatibility or runnable historical release is claimed.
 
 ## Attribution and reuse
 
-No blanket software license has been added. Dependencies retain their own terms. Original authors can open an issue to contribute updates or request corrections or removal of their material.
+No blanket software license has been added. Retain the original notices and third-party terms. The `Quaternion` implementation includes an attribution to the Bones framework for JPCT; it remains in the source. The related iOS renderer retains its 2014 Technion copyright and “All rights reserved” notice. Launcher graphics and projection resources are preserved from the historical snapshots; their inclusion does not assign new rights.
 
 On 2026-11-12, Alex Kligman agreed to Aaron Wetzler keeping the archival project page and repository. This records Alex Kligman's response only; no software license is added. The recovered subset and historical hardware/dependency limitations are unchanged.
 
-Figure provenance: `assets/project-preview.jpg` is the original student-project photograph from the archived project page on Aaron Wetzler's website, copied without modification. It shows the capture setup, not a reconstruction produced during recovery.
+That dated record describes the earlier snapshot; it does not extend the correspondence to the additional versions recovered on 14 November 2026.
 
+Original authors can open an issue to contribute updates or request corrections or removal of their material. [Project entry on Aaron Wetzler's website](https://twerdster.github.io/#3d-scanner-on-android).
+
+Figure provenance: `assets/project-preview.jpg` is the original student-project photograph from the archived project page on Aaron Wetzler's website, copied without modification. It shows the capture setup, not a reconstruction produced during recovery.

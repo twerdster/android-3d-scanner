@@ -1,0 +1,5 @@
+# Historical file bytes (including original CRLF/trailing spaces) are archival evidence.
+# The manifest verifier enforces exact bytes; new documentation keeps normal checks.
+source/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+versions/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+related/ios-fusion/viewer/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
