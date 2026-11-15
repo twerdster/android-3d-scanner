@@ -1,5 +1,7 @@
 # Pipeline animation
 
+The current README hero is the [dense Stanford Dragon showcase](../showcase/README.md), with its own generator, data and media validation. The smaller regression-scene animation below remains available unchanged.
+
 [beam-reconstruction.gif](../assets/beam-reconstruction.gif) is a **12-second, 1000 × 620** loop showing three generated scenes: sphere/background, depth step and projector shadow. The left panel cycles through the actual twelve black/white/Gray capture buffers; the middle shows final decoded columns and depth; the right rotates the final reconstructed cloud. It does not imply that partial capture prefixes produce a complete reconstruction, or that the physical phone has been run.
 
 The camera captures and calibration are the committed replay fixture. Point positions come from the saved corrected-replay PLYs and are checked against decoding those captures. No ground-truth vertices replace the reconstruction. Capture brightness has a fixed display-only gain of two; depth and cloud colors share the 0.35–1.0 virtual-metre scale. The view rotates around each fixed point set; the scene geometry is not animated or re-estimated. This media introduces no new reconstruction algorithm.

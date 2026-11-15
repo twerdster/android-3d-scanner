@@ -1,0 +1,10 @@
+{
+  "schema": "beam-dense-showcase-checks-v1",
+  "status": "passed",
+  "tests_run": 5,
+  "failures": 0,
+  "errors": 0,
+  "scope": "Dense observation-only numerical replay, independent scoring/coverage, camera/projector constraints, shadow radiometry and media bindings",
+  "source_sha256": "598e6e5484b09f22695198044a29981f9508d2f2a05b8a1cf47caa769ba458cb",
+  "test_log": "test_geometric_shadow_removes_pattern_modulation (__main__.ShowcaseChecks.test_geometric_shadow_removes_pattern_modulation) ... ok\ntest_independent_error_and_full_illuminated_coverage (__main__.ShowcaseChecks.test_independent_error_and_full_illuminated_coverage) ... ok\ntest_observations_only_reproduce_dense_saved_output (__main__.ShowcaseChecks.test_observations_only_reproduce_dense_saved_output) ... ok\ntest_projective_constraints_in_declared_pixel_coordinates (__main__.ShowcaseChecks.test_projective_constraints_in_declared_pixel_coordinates) ... ok\ntest_source_artifact_and_gif_frame_bindings (__main__.ShowcaseChecks.test_source_artifact_and_gif_frame_bindings) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 1.681s\n\nOK\n"
+}

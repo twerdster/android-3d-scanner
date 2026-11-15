@@ -1,0 +1,48 @@
+{
+  "all_passed": true,
+  "official_archive_url": "https://graphics.stanford.edu/pub/3Dscanrep/dragon/dragon_recon.tar.gz",
+  "official_archive_sha256": "74ac1d90989c9b1732edee82d57e9ce71452144cf4355f108d8c9c616d28d02f",
+  "original_member_sha256": "fea87ff48f2aba22fb53e7b67c3ff3f7b8c2a3b3a0653af62c48bba67c6d5744",
+  "exact_asset_reproduction": {
+    "dragon-normalized.npz": {
+      "bytes": 9643956,
+      "sha256": "b7e0fffaad4305e87490c12e186b3c3df0bb06b2a2e584c426e381a843ffbd49",
+      "exact_recipe_reproduction": true
+    },
+    "dragon-normalized.obj": {
+      "bytes": 38617850,
+      "sha256": "c5eea476e60b56488d525de17a5edece76fea04c9799dfe615bef32bbbd33dc6",
+      "exact_recipe_reproduction": true
+    },
+    "dragon-normalized.ply": {
+      "bytes": 21832119,
+      "sha256": "33fa12786d90df5efe6d86b6eead6740353ec5caacd62d14bf80d431f4c76142",
+      "exact_recipe_reproduction": true
+    }
+  },
+  "normalization_inverse_max_abs_source_error": 2.7755575615628914e-17,
+  "source_terms_page": "https://graphics.stanford.edu/data/3Dscanrep/",
+  "source_terms_checked_utc_date": "2026-11-15",
+  "source_page_sha256": "c749d2d447497deba9df78c1ea11845e67c640b9b41475abfc8bdf60f40624d4",
+  "terms_scope": "Research use and free redistribution with acknowledgement; commercial permission required; retain separate Stanford data terms.",
+  "helper_code_files": [
+    {
+      "path": "mesh_scene.py",
+      "sha256": "c2e1d2474744317cd16043d8d91b4b3220cf741268f352b983d250a334d7d093"
+    },
+    {
+      "path": "prepare_mesh.py",
+      "sha256": "71463362fdd643ecd8cbb755d795c7a5ba298602fb4483d419be79180684c28f"
+    },
+    {
+      "path": "validate_mesh_scene.py",
+      "sha256": "eee97669f0c1f94bad6da6258e5a807058a63125e14b822bcf4e37bfb2d90659"
+    },
+    {
+      "path": "HELPER-LICENSE",
+      "sha256": "8c7fbc8e0014348745ec005c2d0c3006eb5356a2b45f91a6e403c0b61409a5e0"
+    }
+  ],
+  "original_shared_license_sha256": "1d20fb3fb45f1d73acdd333aace5b496b6f4ca67f53ad60e88cc2b2de106b9dd",
+  "published_license_scope_note": "Published license scope extends the shared new-code grant to all newly authored showcase Python source; data/derived media, historical source and third-party dependencies remain excluded. No algorithm or asset bytes changed."
+}

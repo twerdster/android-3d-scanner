@@ -60,3 +60,4 @@ UserSettings/
 *~
 *.old
 __pycache__/
+.venv-showcase/

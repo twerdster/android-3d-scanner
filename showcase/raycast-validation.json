@@ -1,0 +1,30 @@
+{
+  "scope": "Forward mesh raycasting only; no scanner inverse or hardware test",
+  "checks": {
+    "analytic_nearest_scaled_direction_miss_and_behind": true,
+    "near_shift_finds_next_surface_and_far_clip": true,
+    "open_segment_shadow_and_known_distance": true,
+    "pinhole_center_corner_and_right_handed_pose": true,
+    "full_mesh_counts_and_uniform_scale_bounds": true,
+    "32_full_mesh_exhaustive_float64_reference_rays": true,
+    "camera_self_shadow_tolerance_and_other_view_occlusion": true
+  },
+  "all_passed": true,
+  "versions": {
+    "numpy": "2.0.2",
+    "open3d": "0.18.0"
+  },
+  "mesh_vertices": 437645,
+  "mesh_triangles": 871414,
+  "rays": 76800,
+  "first_hits": 18601,
+  "other_view_unoccluded": 12724,
+  "exhaustive_reference_rays": 32,
+  "maximum_first_hit_parameter_error": 2.496176885191659e-07,
+  "mesh_build_seconds": 0.006013665930368006,
+  "ray_batch_seconds": 0.029586874996311963,
+  "input_sha256": {
+    "mesh_scene.py": "c2e1d2474744317cd16043d8d91b4b3220cf741268f352b983d250a334d7d093",
+    "dragon-normalized.npz": "b7e0fffaad4305e87490c12e186b3c3df0bb06b2a2e584c426e381a843ffbd49"
+  }
+}

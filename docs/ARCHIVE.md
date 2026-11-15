@@ -2,6 +2,8 @@
 
 The [README](../README.md) introduces the scanning method and runnable results. This guide collects the archival and build details without making them the project’s opening narrative.
 
+The current dense [Dragon showcase](../showcase/README.md) is a separate generated experiment. Its mesh provenance, dataset, metrics and media records do not alter the historical manifest or smaller regression fixtures below.
+
 | Snapshot | Selected files | Scope |
 | --- | ---: | --- |
 | [Submitted Eclipse app](../source/) | 62 | Eleven Java classes, configuration/XML, 24 projection BMPs and eleven PNG resources |

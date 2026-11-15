@@ -1,0 +1,50 @@
+{
+  "schema": "scanner-shared-mesh-v1",
+  "asset": "Stanford Dragon",
+  "source_page": "https://graphics.stanford.edu/data/3Dscanrep/",
+  "archive_url": "https://graphics.stanford.edu/pub/3Dscanrep/dragon/dragon_recon.tar.gz",
+  "archive_sha256": "74ac1d90989c9b1732edee82d57e9ce71452144cf4355f108d8c9c616d28d02f",
+  "source_member": "dragon_recon/dragon_vrip.ply",
+  "source_member_sha256": "fea87ff48f2aba22fb53e7b67c3ff3f7b8c2a3b3a0653af62c48bba67c6d5744",
+  "vertices": 437645,
+  "triangles": 871414,
+  "source_bounds": [
+    [
+      -0.108324,
+      0.0527295,
+      -0.0504143
+    ],
+    [
+      0.0965662,
+      0.197173,
+      0.0412075
+    ]
+  ],
+  "translation_before_uniform_scale": [
+    0.005878899999999999,
+    -0.0527295,
+    0.0046034000000000005
+  ],
+  "uniform_scale": 2.4230927663757797,
+  "normalized_bounds": [
+    [
+      -0.24823398076064343,
+      0.0,
+      -0.11100406041116422
+    ],
+    [
+      0.24823398076064343,
+      0.3499999999999999,
+      0.11100406041116422
+    ]
+  ],
+  "world_coordinates": "+X right; +Y up; +Z completing right handed world; floorY=0; centerX/Z=0",
+  "camera_coordinates": "+X right; +Y down; +Z forward",
+  "blender_coordinates": "(x,y,z)_world -> (x,-z,y)_Blender",
+  "known_source_limitation": "Official source documents numerous small holes; no filling/decimation/morphing performed.",
+  "files": {
+    "dragon-normalized.npz": "b7e0fffaad4305e87490c12e186b3c3df0bb06b2a2e584c426e381a843ffbd49",
+    "dragon-normalized.obj": "c5eea476e60b56488d525de17a5edece76fea04c9799dfe615bef32bbbd33dc6",
+    "dragon-normalized.ply": "33fa12786d90df5efe6d86b6eead6740353ec5caacd62d14bf80d431f4c76142"
+  }
+}

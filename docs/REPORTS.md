@@ -24,4 +24,6 @@ This is related lab context, with its own author list. It is not the Godlin/Klig
 
 ## Current executable illustration
 
+The [dense Stanford Dragon showcase](../showcase/README.md) now supplies the README hero: twelve 512 × 384 generated captures feed the existing corrected decoder, producing 77,870 points with separately scored geometry and visibility. It is a single-view synthetic experiment with supplied calibration and separate Stanford asset terms; its error measurements are not results from either historical document.
+
 The [synthetic replay](../updated/README.md) uses independent camera rays, known surfaces and projector visibility to generate captures. Actual saved corrected-replay points, not ground-truth vertices, form the rotating clouds in the [pipeline GIF](../assets/beam-reconstruction.gif). The depth step and shadow scenes make discontinuities and missing illumination visible; calibration is supplied. The [media guide](MEDIA.md) records how the animation is generated and verified. The [numerical model](SIMULATION.md) records errors, conditions, explicit corrections and failures.

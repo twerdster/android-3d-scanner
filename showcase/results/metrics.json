@@ -1,0 +1,96 @@
+{
+  "schema": "beam-dense-showcase-v1",
+  "scene": "Stanford Dragon",
+  "conditions": {
+    "resolution": [
+      512,
+      384
+    ],
+    "gray_bits": 10,
+    "captures": 12,
+    "projector_columns": 1024,
+    "world_units": "metres",
+    "mesh_height_m": 0.35,
+    "baseline_m": 0.12,
+    "seed": 20261116,
+    "read_noise_std_levels": 0.8,
+    "radiometry": "Lambertian direct illumination, inverse-square falloff, spatial reflectance, ambient and independent read noise",
+    "normal_policy": "Two-sided raycasting; source triangle normals oriented toward observing camera before illumination, including scan-hole/back-facing boundaries",
+    "sampling": "pixel-centre pinhole rays; hard-edged binary projector patterns",
+    "not_modelled": [
+      "optical blur",
+      "interreflection",
+      "inter-frame motion",
+      "calibration estimation",
+      "real hardware"
+    ],
+    "decoder": "existing updated.synthetic.decode_corrected unchanged; before clipping/median; supplied calibration",
+    "decoder_inputs": "8-bit captures and calibration only; no truth, normals or visibility"
+  },
+  "metrics": {
+    "camera_pixels": 196608,
+    "camera_surface_pixels": 79082,
+    "illuminated_surface_pixels": 78200,
+    "projector_shadow_pixels": 880,
+    "outside_projector_pixels": 0,
+    "backlit_surface_pixels": 2,
+    "accepted_points": 77870,
+    "scored_illuminated_points": 77870,
+    "illuminated_coverage": 0.9957800511508952,
+    "false_valid_background_points": 0,
+    "false_valid_unilluminated_points": 0,
+    "exact_projector_integer_points": 77870,
+    "rmse_m": 0.0011578977042779272,
+    "median_error_m": 0.0009896675577933795,
+    "p95_error_m": 0.0019427889491998682,
+    "max_error_m": 0.0028275890018197984,
+    "rejections": {
+      "low_contrast": 118737,
+      "valid": 77870,
+      "ambiguous_bit": 1
+    },
+    "accepted_mesh_distance_rmse_m": 0.0008704935297471301,
+    "accepted_mesh_distance_p95_m": 0.0015783645852934574
+  },
+  "mesh": {
+    "vertices": 437645,
+    "triangles": 871414,
+    "normalized_npz_sha256": "b7e0fffaad4305e87490c12e186b3c3df0bb06b2a2e584c426e381a843ffbd49",
+    "source_member_sha256": "fea87ff48f2aba22fb53e7b67c3ff3f7b8c2a3b3a0653af62c48bba67c6d5744"
+  },
+  "software": {
+    "python": "3.12.7",
+    "numpy": "2.0.2",
+    "open3d": "0.18.0"
+  },
+  "elapsed_seconds": 2.3952822090359405,
+  "source_sha256": {
+    "showcase/build_showcase.py": "48883504dcbca4d886371fb7e31872ab51fe4becdae19fee52bb12966faabf1e",
+    "showcase/observations.py": "721cd164b6beb0875f75046c0eff3427b6121aebdb8679672c8acda1fab515be",
+    "showcase/mesh_scene.py": "c2e1d2474744317cd16043d8d91b4b3220cf741268f352b983d250a334d7d093",
+    "updated/synthetic.py": "302b6b8ad1b7fbbb3494aff5b9a3ca95211eff0b19853215888c8018906fd6e6"
+  },
+  "output_sha256": {
+    "showcase/results/captures/00.png": "23f7c5b46c4e0bdd7476773888b515f2516fa4f18afeae7a38c501f8524b7446",
+    "showcase/results/captures/01.png": "323af1bf8d99148f9daa609f46a0273b10609bd8ee4ff7227db666911baed048",
+    "showcase/results/captures/02.png": "c3dd3434ae931587541a9f5d8405ea94b012a0e95f0fbed18f48777f6218fc3e",
+    "showcase/results/captures/03.png": "b8dfd9ccbead30a1c4cb9d727c6456ec1b9a20eed48868ff9d8ae1a27e6c6c8b",
+    "showcase/results/captures/04.png": "bb0901e91db42fdbc95aa1268127625c0bc6d7c8d9c3f5159c65a6e7642ffe2e",
+    "showcase/results/captures/05.png": "875cb62884173da9d2eb6033bdca8c30a0b8725fe9f5d1c3390aca9918a887fe",
+    "showcase/results/captures/06.png": "d9d38219a269a3b6a1d040e07696543c55ede4fe8fdabc07284ae9a2a8b0758b",
+    "showcase/results/captures/07.png": "0f021a8aad79b4dc66b9ebd09e78c3dfc5cdf8ab676e0b798c00312ab16d31eb",
+    "showcase/results/captures/08.png": "273fac7bd7bac2a8e631beab24f38006c12bdfae53bd6882ffbf219a5ecc04bf",
+    "showcase/results/captures/09.png": "d21accc4b3989b6a4302bfcb571b3d90499c1fde41a3507a88db27b6e4616178",
+    "showcase/results/captures/10.png": "bd7e29ad43189d08fbecad11feacf9960383e7c28a8dfb92c3ca1c63085af61b",
+    "showcase/results/captures/11.png": "3c8007d9298b952a151ee9c22923abcacb7f2ae23eacba6f6688534e91d583fb",
+    "showcase/results/depth.png": "7b8eed4b10129f369349f8d9c12df58b14838e993175466436727aa86c90d333",
+    "showcase/results/dragon-reconstruction.ply": "adf35940850d53b2dd683a5d06a32978d2b59bc53aca7962a408f848c97e3a9d",
+    "showcase/results/evaluation.npz": "91f84e108ccb3701778c8ca044e835e38cb2de38961e753c695f9e1688401166",
+    "showcase/results/illuminated-mask.png": "f5738aff212855f18fc45fac804773dbe87b31afac9e45e05d39d3615b2c2b90",
+    "showcase/results/observations.npz": "975addae45e67a272e2675fc32427167a3739974fb0f629d9e29946ad8a9bd41",
+    "showcase/results/reconstruction.npz": "72f50b0391fc60522fdf2b90a6aa0979a3482da088dfc9aee890e07aaae392ae",
+    "showcase/results/rig.json": "9cc49f9a5063b0ea9acf7c8e0907545859a2632d89b1dea63a32799b620c8e8e",
+    "showcase/results/shadow-mask.png": "6df8d63c6d5eaeb155f066995f7a1a786fef49b73d6ad4dbfb5e9693ea1c9efe",
+    "showcase/results/truth-depth.png": "7eece09267a7da66d43c975aee86d15368584ae4d4ba969913371c00c06a9989"
+  }
+}
