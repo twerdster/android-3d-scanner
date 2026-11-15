@@ -1,8 +1,12 @@
-# Android 3D scanner recovery context
+# Android structured-light scanner context
 
 Read this file before SKILL.md. Updated 2026-11-15.
 
 This repository archives the Galaxy Beam/prism structured-light student project credited to Arkadi Godlin and Alex Kligman, lab engineer Alon Zvirin and supervisor Aaron Wetzler. Publication base is `d35bac0012fc479d98fe06ac8e2538a24704b4da`; preserve its Alex Kligman correspondence paragraph and preview image.
+
+The README now leads with the scanning idea, a runnable synthetic replay and its measured software results. Detailed recovery/version/build information is in docs/ARCHIVE.md and the existing technical guides. The original seven-page “Mobile 3D scanner final report” is preserved unchanged at docs/mobile-3d-scanner-report.pdf (511,484 bytes; SHA-256 62319c49f34c5659b9a750fd3a728a42dd8113cd8fa6a1f971dc1643e41f89a9). Its document metadata is dated 24 May 2014; its qualitative face cloud supplies no accuracy/runtime benchmark. docs/REPORTS.md separates this student report from the related 2014 Wetzler/Herskovitz/Carmeli/Kimmel Galaxy Beam/prism poster. The report adds no license grant and is not part of the 180-file source manifest.
+
+tools/generate_demo_gif.py produces assets/beam-reconstruction.gif and its static poster from the committed sphere, step and projector-shadow capture fixture and corrected-result PLYs. The 1000 × 620, 12-second loop is 1,733,980 bytes. All 180 encoded RGB frames match the intended rendered frames; each cloud has 60 distinct rotation frames. Source/input/output hashes and frame validation are separate in validation/demo-media.json. docs/MEDIA.md describes Pillow/font requirements, fixed display-only capture brightness gain and external PNG scratch. The media pass changes no numerical source, fixture, metric or Android application. Calibration is supplied and these are synthetic software results, not measured phone accuracy.
 
 Recovery now contains 180 original file instances / 70,600,050 bytes: submitted Eclipse `source/` 62, earlier `versions/eclipse-2014/` 54, later `versions/android-studio/` 63 and a separately labeled related iOS renderer 1. These counts include repeated versioned configuration/resources. The 27 previously published `source/` files are unchanged; 35 RAR image resources were added. All original imported bytes remain unchanged and are hashed in `recovery/manifest.json`.
 

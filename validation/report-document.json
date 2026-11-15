@@ -1,0 +1,27 @@
+{
+  "schema": "beam-report-document-v1",
+  "document": "docs/mobile-3d-scanner-report.pdf",
+  "title": "Mobile 3D scanner final report",
+  "page_count": 7,
+  "bytes": 511484,
+  "sha256": "62319c49f34c5659b9a750fd3a728a42dd8113cd8fa6a1f971dc1643e41f89a9",
+  "metadata": {
+    "/Author": "Alex",
+    "/Creator": "Microsoft® Word 2013",
+    "/CreationDate": "D:20140524213513+03'00'",
+    "/ModDate": "D:20140524213513+03'00'",
+    "/Producer": "Microsoft® Word 2013"
+  },
+  "origin": "Preserved Godlin/Kligman project website folder; original bytes unchanged",
+  "date_scope": "PDF document creation/modification metadata, not an independently established publication date",
+  "credits_scope": "PDF Author field Alex is metadata; project credits remain Arkadi Godlin and Alex Kligman, lab engineer Alon Zvirin, supervisor Aaron Wetzler",
+  "review": {
+    "all_pages_text_and_raster_reviewed": true,
+    "objects_reviewed": 57,
+    "attachments_annotations_forms_javascript_active_actions_found": false,
+    "concrete_private_identifiers_credentials_machine_paths_found": false,
+    "scope": "Bounded publication review of this unchanged document; no new license grant"
+  },
+  "results_scope": "Page 6 qualitative reconstructed face cloud; no numerical accuracy, runtime, scan-distance or benchmark table",
+  "notes": "docs/REPORTS.md"
+}
