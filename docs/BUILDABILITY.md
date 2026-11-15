@@ -1,6 +1,6 @@
 # Buildability and validation scope
 
-These recovered versions are preserved for inspection. No complete Android application build, APK installation or camera/projector run was completed during recovery. Do not execute an old wrapper or install archived binaries just to inspect the code.
+These recovered versions are preserved unchanged. A real untouched-source build attempt is now recorded below; the historical Android application remains blocked. A separately maintained replay application and desktop numerical harness live in `updated/`. Their execution does not establish a restored historical APK or camera/projector capture. Do not execute archived binaries as inspection tools.
 
 | Version | Recorded configuration | Missing or unresolved requirements |
 | --- | --- | --- |
@@ -35,4 +35,12 @@ javac -d /path/to/output \
 
 Use the corresponding Studio or earlier Eclipse paths for their separate helper checks. Do not combine identically named classes from different snapshots in one invocation.
 
-A standard-path Android SDK was unavailable in the checking environment. Full Android compilation was therefore not attempted. There is no claim of reconstruction accuracy, device compatibility, restored SDK service availability or a modernized application. Source/resource preservation and helper compilation are separate from those unperformed checks.
+A standard-path Android SDK was unavailable during the original recovery checks. The later application-validation work installed a task-scoped SDK and made concrete build attempts without modifying the historical sources.
+
+## Later build and replay attempts
+
+[historical-build-attempt.json](../validation/historical-build-attempt.json) records trusted Java/`javac` invocations. The original Studio wrapper entry fails because its wrapper JAR is absent; required OpenCV modules and the referenced ProGuard file are also absent. Compiling submitted sources against installed Android API 35 still fails on missing OpenCV classes and resource-generated `R` classes. Resource generation, a restored historical Gradle/ADT toolchain and the external OpenCV modules are unresolved; no historical APK is produced. The API 35 attempt replaces the earlier environment-only SDK limitation with actual diagnostics. The old Gradle scripts and archived binaries were not executed.
+
+[headless-build.json](../validation/headless-build.json) records successful compilation of the unchanged submitted `Reconstructor.java` and `CalibrationFile.java` with new compile-only desktop shims. Four private numerical methods run in the JVM on independent ray-generated capture fixtures. This uses no Android or OpenCV runtime and deliberately stops before clipping/median postprocessing. The [simulation guide](SIMULATION.md) details corrections, ground-truth errors and limits.
+
+The new [Android replay app](../updated/android-replay/README.md) has its own direct SDK build, assets, source-body provenance check and supplied-calibration scope. It has no camera/projector or network permission. Keep its build and device validation distinct from historical source preservation and from real hardware reconstruction accuracy.

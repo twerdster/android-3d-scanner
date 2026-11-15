@@ -1,0 +1,12 @@
+{
+  "schema": "beam-replay-build-v1",
+  "apk_sha256": "de5fda95a802584232b549806db4e86faddd2b825f57faafb2fadac1e7285b15",
+  "fixture_sha256": "adb86d2045a383883b568c5d7a7d7bd669d9e50e231c491490daa84cba9c8585",
+  "source_java_files": 7,
+  "build_tools": "35.0.0",
+  "platform": "android-35",
+  "min_api": 26,
+  "target_api": 35,
+  "device_execution": false,
+  "signing": "task-owned disposable debug key outside repository"
+}

@@ -1,0 +1,6 @@
+__pycache__/
+*.class
+*.dex
+*.apk
+*.keystore
+*.idsig

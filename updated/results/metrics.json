@@ -1,0 +1,1309 @@
+{
+  "schema": "beam-synthetic-validation-v1",
+  "conditions": {
+    "camera_resolution": "64x48; radial-center test 65x49",
+    "projector_columns": 1024,
+    "gray_bits": 10,
+    "baseline_m": 0.12,
+    "default_plane_depth_m": 0.72,
+    "noise_standard_deviation_levels": 3,
+    "seed": 20261115,
+    "world_units": "metres",
+    "photometry": "black/white plus binary Gray modulation; no blur/interreflection/lens PSF",
+    "comparison_stage": "decode, normalization, radial correction and triangulation; before Clear and median",
+    "corrected_changes": [
+      "unsigned differences",
+      "decoded-bit normalization",
+      "low-contrast/confidence checks",
+      "finite radial-center limit",
+      "pivot/singularity and positive-depth guards"
+    ],
+    "not_validated": [
+      "physical camera/projector/prism",
+      "calibration estimation",
+      "Android historical app",
+      "OpenCV filtering",
+      "motion between captures"
+    ]
+  },
+  "scenes": {
+    "plane": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 576,
+          "scored_visible_points": 576,
+          "visible_coverage": 0.2553191489361702,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 576,
+          "rmse_m": 2.1071865174700037,
+          "max_error_m": 6.578126267057242,
+          "p95_error_m": 5.427108027485663,
+          "reasons": {
+            "nonfinite": 2496,
+            "finite": 576
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 2256,
+          "scored_visible_points": 2256,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 2256,
+          "rmse_m": 0.003178454712430514,
+          "max_error_m": 0.00722365598063802,
+          "p95_error_m": 0.005405075436723665,
+          "reasons": {
+            "low_contrast": 816,
+            "valid": 2256
+          }
+        },
+        "direct_projection_triangulation": {
+          "points": 3072,
+          "rmse_m": 2.3210404198897676e-07,
+          "max_error_m": 7.642188177155042e-07,
+          "scope": "oracle forward-projected coordinates; isolated unchanged triangulation check"
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 816,
+        "visible": 2256
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "tilted": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2225,
+          "finite_points": 554,
+          "scored_visible_points": 554,
+          "visible_coverage": 0.24898876404494383,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 554,
+          "rmse_m": 8.748883261820229,
+          "max_error_m": 112.97880669583499,
+          "p95_error_m": 5.425925783548498,
+          "reasons": {
+            "nonfinite": 2518,
+            "finite": 554
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2225,
+          "finite_points": 2225,
+          "scored_visible_points": 2225,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 2225,
+          "rmse_m": 0.003451833926463526,
+          "max_error_m": 0.011218683718419435,
+          "p95_error_m": 0.006346831725681783,
+          "reasons": {
+            "low_contrast": 847,
+            "valid": 2225
+          }
+        },
+        "direct_projection_triangulation": {
+          "points": 3072,
+          "rmse_m": 1.9570470118149332e-07,
+          "max_error_m": 1.234013532263254e-06,
+          "scope": "oracle forward-projected coordinates; isolated unchanged triangulation check"
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 847,
+        "visible": 2225
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "sphere": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 576,
+          "scored_visible_points": 576,
+          "visible_coverage": 0.2553191489361702,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 576,
+          "rmse_m": 27.439470880024256,
+          "max_error_m": 109.06118104742374,
+          "p95_error_m": 90.51660844792873,
+          "reasons": {
+            "nonfinite": 2496,
+            "finite": 576
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 2256,
+          "scored_visible_points": 2256,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 2256,
+          "rmse_m": 0.005390515269732966,
+          "max_error_m": 0.011163745248539867,
+          "p95_error_m": 0.009332263737902292,
+          "reasons": {
+            "low_contrast": 816,
+            "valid": 2256
+          }
+        },
+        "direct_projection_triangulation": {
+          "points": 3072,
+          "rmse_m": 3.9434789247437547e-07,
+          "max_error_m": 1.048256412728532e-06,
+          "scope": "oracle forward-projected coordinates; isolated unchanged triangulation check"
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 816,
+        "visible": 2256
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "step": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 576,
+          "scored_visible_points": 576,
+          "visible_coverage": 0.2553191489361702,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 576,
+          "rmse_m": 1.6188636813721515,
+          "max_error_m": 4.983694667066222,
+          "p95_error_m": 3.4005051411302647,
+          "reasons": {
+            "nonfinite": 2496,
+            "finite": 576
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 2256,
+          "scored_visible_points": 2256,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 2256,
+          "rmse_m": 0.003274975994809842,
+          "max_error_m": 0.00874992573829603,
+          "p95_error_m": 0.006480820475318997,
+          "reasons": {
+            "low_contrast": 816,
+            "valid": 2256
+          }
+        },
+        "direct_projection_triangulation": {
+          "points": 3072,
+          "rmse_m": 1.5639672192412304e-07,
+          "max_error_m": 1.1039981031341481e-06,
+          "scope": "oracle forward-projected coordinates; isolated unchanged triangulation check"
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 816,
+        "visible": 2256
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "calibrated": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 1963,
+          "finite_points": 471,
+          "scored_visible_points": 471,
+          "visible_coverage": 0.23993886907794193,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 471,
+          "rmse_m": 5.275497385207547,
+          "max_error_m": 61.35325520407848,
+          "p95_error_m": 4.627490570117012,
+          "reasons": {
+            "nonfinite": 2601,
+            "finite": 471
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 1963,
+          "finite_points": 1963,
+          "scored_visible_points": 1963,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 1963,
+          "rmse_m": 0.0038883389273349457,
+          "max_error_m": 0.020365920705523264,
+          "p95_error_m": 0.007786227504719192,
+          "reasons": {
+            "low_contrast": 1109,
+            "valid": 1963
+          }
+        },
+        "direct_projection_triangulation": {
+          "points": 3072,
+          "rmse_m": 6.791117515269214e-07,
+          "max_error_m": 6.604667786533832e-06,
+          "scope": "oracle forward-projected coordinates; isolated unchanged triangulation check"
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 1109,
+        "visible": 1963
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          0.9932136950183025,
+          -0.06773602453987707,
+          -0.09454304314767784,
+          -0.039869767673974855,
+          0.059664436213805905,
+          0.9945295991852097,
+          -0.08573815600883358,
+          0.029164073647180724,
+          0.09983341664682815,
+          0.07951545336624556,
+          0.9918218497273497,
+          -0.02144431005943275
+        ],
+        "projector_matrix": [
+          0.997751383380491,
+          0.023861929681609426,
+          -0.06263214250036978,
+          -0.05008163714967255,
+          -0.029941524497757693,
+          0.994736012395674,
+          -0.09799883037008082,
+          -0.09454656595172668,
+          0.059964006479444595,
+          0.09965377040044007,
+          0.9932136950183025,
+          -0.04772605668965683
+        ],
+        "baseline_m": 0.13124404748406687,
+        "camera_origin": [
+          0.04,
+          -0.03,
+          0.02
+        ],
+        "projector_origin": [
+          0.05,
+          0.1,
+          0.035
+        ],
+        "seed": 20261115
+      }
+    },
+    "distorted": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 1904,
+          "finite_points": 459,
+          "scored_visible_points": 459,
+          "visible_coverage": 0.24107142857142858,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 459,
+          "rmse_m": 3.601594500163951,
+          "max_error_m": 40.68865049922012,
+          "p95_error_m": 4.721585684190551,
+          "reasons": {
+            "nonfinite": 2613,
+            "finite": 459
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 1904,
+          "finite_points": 1904,
+          "scored_visible_points": 1904,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 1904,
+          "rmse_m": 0.003656524192345755,
+          "max_error_m": 0.017902365459849245,
+          "p95_error_m": 0.007460731483479578,
+          "reasons": {
+            "low_contrast": 1168,
+            "valid": 1904
+          }
+        },
+        "direct_projection_triangulation": {
+          "points": 3072,
+          "rmse_m": 1.0356233477471004e-06,
+          "max_error_m": 1.2284717052807521e-05,
+          "scope": "oracle forward-projected coordinates; isolated unchanged triangulation check"
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 1168,
+        "visible": 1904
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.04,
+          -0.03,
+          1.15,
+          0.92,
+          0.08,
+          0.015
+        ],
+        "camera_matrix": [
+          0.9932136950183025,
+          -0.06773602453987707,
+          -0.09454304314767784,
+          -0.039869767673974855,
+          0.059664436213805905,
+          0.9945295991852097,
+          -0.08573815600883358,
+          0.029164073647180724,
+          0.09983341664682815,
+          0.07951545336624556,
+          0.9918218497273497,
+          -0.02144431005943275
+        ],
+        "projector_matrix": [
+          0.997751383380491,
+          0.023861929681609426,
+          -0.06263214250036978,
+          -0.05008163714967255,
+          -0.029941524497757693,
+          0.994736012395674,
+          -0.09799883037008082,
+          -0.09454656595172668,
+          0.059964006479444595,
+          0.09965377040044007,
+          0.9932136950183025,
+          -0.04772605668965683
+        ],
+        "baseline_m": 0.13124404748406687,
+        "camera_origin": [
+          0.04,
+          -0.03,
+          0.02
+        ],
+        "projector_origin": [
+          0.05,
+          0.1,
+          0.035
+        ],
+        "seed": 20261115
+      }
+    },
+    "projector_shadow": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2166,
+          "finite_points": 522,
+          "scored_visible_points": 522,
+          "visible_coverage": 0.2409972299168975,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 522,
+          "rmse_m": 2.0682938945020934,
+          "max_error_m": 6.578126267057242,
+          "p95_error_m": 5.4819425829302455,
+          "reasons": {
+            "nonfinite": 2550,
+            "finite": 522
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2166,
+          "finite_points": 2166,
+          "scored_visible_points": 2166,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 2166,
+          "rmse_m": 0.0031041218798139153,
+          "max_error_m": 0.00722365598063802,
+          "p95_error_m": 0.005418736199797894,
+          "reasons": {
+            "low_contrast": 906,
+            "valid": 2166
+          }
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 852,
+        "projector_occluded": 54,
+        "visible": 2166
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "noise": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 845,
+          "scored_visible_points": 576,
+          "visible_coverage": 0.2553191489361702,
+          "false_valid_unilluminated_points": 269,
+          "exact_decoded_integer_points": 576,
+          "rmse_m": 2.1071865174700037,
+          "max_error_m": 6.578126267057242,
+          "p95_error_m": 5.427108027485663,
+          "reasons": {
+            "finite": 845,
+            "nonfinite": 2227
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 2256,
+          "scored_visible_points": 2256,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 2256,
+          "rmse_m": 0.003178454712430514,
+          "max_error_m": 0.00722365598063802,
+          "p95_error_m": 0.005405075436723665,
+          "reasons": {
+            "low_contrast": 813,
+            "valid": 2256,
+            "ambiguous_bit": 3
+          }
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 816,
+        "visible": 2256
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "bright_contrast": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 0,
+          "scored_visible_points": 0,
+          "visible_coverage": 0.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 0,
+          "rmse_m": null,
+          "max_error_m": null,
+          "p95_error_m": null,
+          "reasons": {
+            "nonfinite": 3072
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 2256,
+          "scored_visible_points": 2256,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 2256,
+          "rmse_m": 0.003178454712430514,
+          "max_error_m": 0.00722365598063802,
+          "p95_error_m": 0.005405075436723665,
+          "reasons": {
+            "low_contrast": 816,
+            "valid": 2256
+          }
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 816,
+        "visible": 2256
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "low_contrast": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 576,
+          "scored_visible_points": 576,
+          "visible_coverage": 0.2553191489361702,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 576,
+          "rmse_m": 2.1071865174700037,
+          "max_error_m": 6.578126267057242,
+          "p95_error_m": 5.427108027485663,
+          "reasons": {
+            "nonfinite": 2496,
+            "finite": 576
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 0,
+          "scored_visible_points": 0,
+          "visible_coverage": 0.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 0,
+          "rmse_m": null,
+          "max_error_m": null,
+          "p95_error_m": null,
+          "reasons": {
+            "low_contrast": 3072
+          }
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 816,
+        "visible": 2256
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "corrupt_bit": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 576,
+          "scored_visible_points": 576,
+          "visible_coverage": 0.2553191489361702,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 560,
+          "rmse_m": 2.0820178436637087,
+          "max_error_m": 6.578126267057242,
+          "p95_error_m": 5.377278859289084,
+          "reasons": {
+            "nonfinite": 2496,
+            "finite": 576
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2256,
+          "finite_points": 2247,
+          "scored_visible_points": 2247,
+          "visible_coverage": 0.9960106382978723,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 2195,
+          "rmse_m": 0.47663770584955983,
+          "max_error_m": 14.678576311097213,
+          "p95_error_m": 0.005901620591416974,
+          "reasons": {
+            "low_contrast": 816,
+            "valid": 2247,
+            "behind_camera": 9
+          }
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 816,
+        "visible": 2256
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "zero_baseline": {
+      "metrics": {
+        "historical": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2304,
+          "finite_points": 528,
+          "scored_visible_points": 528,
+          "visible_coverage": 0.22916666666666666,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 528,
+          "rmse_m": 0.9977067412381236,
+          "max_error_m": 1.229642043995058,
+          "p95_error_m": 1.1605203247568887,
+          "reasons": {
+            "nonfinite": 2544,
+            "finite": 528
+          }
+        },
+        "corrected": {
+          "pixels": 3072,
+          "visible_ground_truth_pixels": 2304,
+          "finite_points": 0,
+          "scored_visible_points": 0,
+          "visible_coverage": 0.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 0,
+          "rmse_m": null,
+          "max_error_m": null,
+          "p95_error_m": null,
+          "reasons": {
+            "low_contrast": 768,
+            "singular": 96,
+            "behind_camera": 2208
+          }
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 768,
+        "visible": 2304
+      },
+      "calibration": {
+        "rows": 48,
+        "cols": 64,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0,
+          0
+        ],
+        "seed": 20261115
+      }
+    },
+    "radial_center": {
+      "metrics": {
+        "historical": {
+          "pixels": 3185,
+          "visible_ground_truth_pixels": 2401,
+          "finite_points": 539,
+          "scored_visible_points": 539,
+          "visible_coverage": 0.22448979591836735,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 539,
+          "rmse_m": 1.661664517249306,
+          "max_error_m": 3.3793248177435737,
+          "p95_error_m": 3.0029774036110797,
+          "reasons": {
+            "nonfinite": 2646,
+            "finite": 539
+          }
+        },
+        "corrected": {
+          "pixels": 3185,
+          "visible_ground_truth_pixels": 2401,
+          "finite_points": 2401,
+          "scored_visible_points": 2401,
+          "visible_coverage": 1.0,
+          "false_valid_unilluminated_points": 0,
+          "exact_decoded_integer_points": 2401,
+          "rmse_m": 0.0031629149590823276,
+          "max_error_m": 0.006891329074142782,
+          "p95_error_m": 0.005467220047397646,
+          "reasons": {
+            "low_contrast": 784,
+            "valid": 2401
+          }
+        }
+      },
+      "visibility_counts": {
+        "outside_projector": 784,
+        "visible": 2401
+      },
+      "calibration": {
+        "rows": 49,
+        "cols": 65,
+        "rd": [
+          0.0,
+          0,
+          1.0,
+          1.0,
+          0,
+          0
+        ],
+        "camera_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "projector_matrix": [
+          1.0,
+          0,
+          0,
+          0,
+          0,
+          1.0,
+          0,
+          -0.12,
+          0,
+          0,
+          1.0,
+          0
+        ],
+        "baseline_m": 0.12,
+        "camera_origin": [
+          0,
+          0,
+          0
+        ],
+        "projector_origin": [
+          0,
+          0.12,
+          0
+        ],
+        "seed": 20261115
+      }
+    }
+  },
+  "artifact_sha256": {
+    "bright_contrast.ply": "82071aec327479fdb9e06e534cace3f4b6bb2e2e758828be048bf26091bb12b7",
+    "bright_contrast.png": "1693bcdaceb9588d045cc45ddfb6a4b6bb7288f4f105c45afef6d18e2d869f2a",
+    "calibrated.ply": "2afdce09c210e150d0a947219440a9287c31cebeba0dca8b16386ca1f223ab68",
+    "calibrated.png": "4527b4221af8d1fed30d8bb2b66107dc65bbb2da0bcb12cc0b1125c139724980",
+    "corrupt_bit.ply": "5cf4c94451bbb12bbead3788faaf3ecd5c8f1903761e29866b61326ac1b23bc1",
+    "corrupt_bit.png": "e2f48347518d36f9e91e0e1825be5d2eeafdbff504f123af88992dc80fdf93bd",
+    "distorted.ply": "03c234a79149c15e653b6f0f72091422cd565985c32aa6f56e701db5653dc882",
+    "distorted.png": "d6636925980a9f9aecb5e69665b91e75a82d2f57688dbb99ce5c97a6f43d36a8",
+    "index.html": "72713b88e631e7b7f615da804a8eb07ee67b44492b0ebdd30f460ddae27a7f72",
+    "low_contrast.ply": "c8c83e1b95545e40c1e6fd017f5dcde778596b7118cda1b8f67853ae50d3f8a7",
+    "low_contrast.png": "1ed6d4bdb9c159d899d9ef220c69e4da640fa60bc228e07a22593500a0692841",
+    "metrics.csv": "d7bedf0d2bc5a0db626a0f19d772520a17d68f5dd44e8ec3cf9a48e10996b51d",
+    "noise.ply": "82071aec327479fdb9e06e534cace3f4b6bb2e2e758828be048bf26091bb12b7",
+    "noise.png": "10960cc256d712b32c7a72cf61b64f3ccef1651a07d8e4a301d25550c8e6f544",
+    "plane.ply": "82071aec327479fdb9e06e534cace3f4b6bb2e2e758828be048bf26091bb12b7",
+    "plane.png": "2dbe11501c0fdbabcadbc7afeea126fa8c33b910b18388f574d5db22590d93bb",
+    "projector_shadow.ply": "a891ac3b0697fbc05613f317b08ce0419caf8fd32bce0cd68391258fbcaae611",
+    "projector_shadow.png": "7384b19eb726edf280772584ffc369163e61e29c108c3f5cb4a9e6a5755dc78a",
+    "radial_center.ply": "42eced605a9d1970a413967b82f504b1e2dcf11cce7ce3db3f3d5cdbf9201257",
+    "radial_center.png": "e28e6d11d37ace8f22497575b6f8cf2bdbb4ffa5a5b3062b2020133fc1f24f41",
+    "sphere.ply": "8b22deeee587c99cf0612d355c894115593fe2d743c7bd482851f03704018aec",
+    "sphere.png": "9f174f674f85bb26ebaaf0e193d524058c4c592bd5206d897dedc8a757c975e4",
+    "step.ply": "86a6d92bdb1b71e7d7cc0c82d1e98b60fa7d844aec52c285c3f3194574b0e97a",
+    "step.png": "3468705c1592ef2fde292ebe5a7235ca5e568c5ef75c06035d63710f67898287",
+    "tilted.ply": "7b12cdf6ec06acff7bef83f3285245d1487ef1b6c0fddd5a608b44bf7867195f",
+    "tilted.png": "a40769084749c6bda724200109d861bb1c19273ae9546eef844939e0800bf070",
+    "zero_baseline.ply": "c8c83e1b95545e40c1e6fd017f5dcde778596b7118cda1b8f67853ae50d3f8a7",
+    "zero_baseline.png": "da4a0c6259ef9ae9478f7559b9914fdbb1c8668fae10f4ebd8263b3231f3fc2f"
+  },
+  "source_sha256": {
+    "updated/__init__.py": "0282ad435def3121c88bac467f91d47c83ad82c935c7e99551a022b073bf3365",
+    "updated/attempt_historical_build.py": "7b0ee340c56a998be0c02336aab24b0fe08cb1c832cba6f02ed74b69452b5895",
+    "updated/build_headless.py": "8e77947374b30d4a11594b00f17c598ab484603394383c8cf372843cbbf0141c",
+    "updated/cli.py": "7e13ed091369dca3b7832fc9b25a814d0402d5fd5791de1c2ab0ef2cd0ef52b8",
+    "updated/compare_android.py": "a151412eecc331a1bd9c39bac991468fd09fed640e2dad03d0e2021e1d1fc7f8",
+    "updated/report.py": "d047a10b54ca75e1f1040407a3dc7f58ba3d340f9dd74e876bc8a1086dfd416e",
+    "updated/run_checks.py": "061cd1c6376b830ed136677834f2469b6153c02977e76ae582c8dbf72e5e269b",
+    "updated/synthetic.py": "302b6b8ad1b7fbbb3494aff5b9a3ca95211eff0b19853215888c8018906fd6e6",
+    "updated/headless/BeamHeadless.java": "88eb0a499317d8fd78339055e6d09919ff65b572ba6157d068cbf60ef52b91b7",
+    "source/src/com/project/logic/Reconstructor.java": "720351709b2c5f6219cf2779ff5bef7c09380d934d601b1625b966e9e972ad4b",
+    "source/src/com/project/logic/CalibrationFile.java": "edf83543fe405f9ce90072249342c627a228a330003c8da6be026ada458b5398"
+  },
+  "replay_fixture_sha256": "adb86d2045a383883b568c5d7a7d7bd669d9e50e231c491490daa84cba9c8585"
+}

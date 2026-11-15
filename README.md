@@ -8,9 +8,44 @@
 ![Code: Java + OpenCV for Android](https://img.shields.io/badge/code-Java%20%2B%20OpenCV%20for%20Android-blue)
 ![Source: recovered historical versions](https://img.shields.io/badge/source-recovered%20historical%20versions-blue)
 
-Historical structured-light 3D reconstruction using a Samsung Galaxy Beam and a prism to align its projector with the camera's field of view. Source, configuration and projection resources from three Android versions are preserved here. These are archival snapshots; a complete application build and hardware capture have not been verified.
+Structured-light 3D reconstruction using a Samsung Galaxy Beam and a prism to align its projector with the camera's field of view. The scanner projects Gray-coded stripes, matches camera pixels to projector addresses and triangulates 3D points using camera/projector calibration.
+
+This repository preserves three historical Android versions and now includes a runnable desktop and Android **synthetic capture replay**. The replay executes recovered scanning calculations on independently generated surfaces with known geometry. The original historical APK remains blocked by missing build dependencies; physical camera/projector capture has not been reproduced.
 
 Students: Arkadi Godlin, Alex Kligman. Lab engineer: Alon Zvirin (historical website spelling: Alon Zivrin). Supervision: Aaron Wetzler.
+
+## Run the reconstruction
+
+Python 3.10+ and a local JDK (`java` and `javac`) are enough for the desktop path; no Python packages or Android SDK are needed:
+
+```sh
+python3 updated/run_checks.py
+python3 -m updated.cli simulate --output updated/results
+```
+
+Open [the interactive report](updated/results/index.html) to inspect captured stripes, ground-truth/reconstructed depth, 3D error and rotatable point clouds. [PLY point clouds](updated/results/sphere.ply), [metrics](updated/results/metrics.json) and a [CSV table](updated/results/metrics.csv) are included. The [new Android replay app](updated/android-replay/README.md) displays the same captures and calculations on-device. See the [replay quickstart and method scope](updated/README.md).
+
+![Simulated sphere and background: twelve captured Gray-code frames followed by truth, historical depth, corrected depth and corrected error](updated/results/sphere.png)
+
+First three rows show the twelve generated captures. The last row shows truth depth, unchanged historical numerical output, corrected depth and corrected error. These are new synthetic results, separate from the physical setup photograph above.
+
+## Synthetic results
+
+The replay runs the **unchanged submitted Java numerical methods** in a desktop harness and compares them with a separately labeled correction. Camera rays intersect planes, a sphere, a depth step and an opaque box; forward projection and visibility tests generate their captured stripe images. Thirteen scenes include transformed calibration, nonlinear radial distortion, shadows, noise, high/low contrast, corrupt bits and degenerate geometry.
+
+| Geometric scene | Corrected 3D RMSE | Illuminated points retained |
+| --- | ---: | ---: |
+| Front plane at 0.72 m | 3.18 mm | 100% |
+| Tilted plane | 3.45 mm | 100% |
+| Sphere with background | 5.39 mm | 100% |
+| Rotated/translated camera and projector | 3.89 mm | 100% |
+| Nonlinear radial correction, offset center and aspect | 3.66 mm | 100% |
+
+These results use virtual calibration, a 64 × 48 camera and ten-bit projector addresses; stripe quantization contributes to the error. The shadow test accepts no unilluminated points, while low contrast and zero baseline yield no valid depth. The unchanged submitted decoder exposes signed-byte overflow and a fourfold scaling discrepancy between twelve captures and ten decoded bits; Studio's different defaults are separately documented. Corrupted stripe bits can still produce large outliers in the corrected path; this is not an error-correcting decoder.
+
+Both numerical comparisons stop before historical coordinate clipping and OpenCV median filtering. The tests do not measure hardware accuracy, calibration estimation or inter-frame motion. [Model, findings and full conditions](docs/SIMULATION.md), [13-test results](validation/numerical-tests.json) and [historical build diagnostics](validation/historical-build-attempt.json) keep those scopes explicit.
+
+The new Android app also ran on an Android 14 ARM64 emulator. Independent comparison covered **80,098 pixel records** with exact validity masks; scene/mode switching, point-cloud rotation, capture browsing and repeatable Replay passed [runtime and UI checks](validation/android-ui.json). See [pixel parity evidence](validation/android-independent-parity.json) for numerical bounds.
 
 ## Recovered versions
 
@@ -27,7 +62,7 @@ The 180 recovered file instances include repeated files retained in their origin
 
 The capture interface projects a sequence of stripe patterns and collects camera frames. [`source/src/com/project/logic/Reconstructor.java`](source/src/com/project/logic/Reconstructor.java) decodes those patterns, corrects camera coordinates using calibration parameters, computes XYZ arrays, removes invalid values and median-filters depth. Its interleaved coordinates feed an OpenGL point display: the `MeshViewActivity` name does not establish a triangle-mesh export workflow. Diagnostic BMP writing targets external storage's `Project/Decode/` directory.
 
-The older six-class Eclipse implementation and the later Android Studio import are preserved separately. Studio adds image-buffer handling and `NormalizeDecodedValues`; these historical changes have not been validated as improvements. Each Android version retains 24 synthetic projection BMPs. The submitted/earlier patterns are 360 × 640 pixels; Studio's are 480 × 800. They are projection patterns, not captured scene images or reconstruction results.
+The older six-class Eclipse implementation and the later Android Studio import are preserved separately. Studio changes image-buffer handling and default dimensions; normalization is present in both submitted and Studio versions. These historical changes are not asserted improvements. Each Android version retains 24 synthetic projection BMPs. The submitted/earlier patterns are 360 × 640 pixels; Studio's are 480 × 800. They are projection patterns, not captured scene images or reconstruction results.
 
 ## Dependencies and checking
 
@@ -39,7 +74,7 @@ Run the offline integrity/resource check with Python 3:
 python3 tools/verify_recovery.py
 ```
 
-[Static-check results](validation/static-checks.json) verify all 180 original hashes, 104 images, 30 XML resource files plus three manifests, Android activity classes and local Java resource references. Five pure-Java helper file instances also [compile with OpenJDK 21](validation/java-helpers.json). These checks do not build an APK, link OpenCV, exercise the camera/projector or measure reconstruction accuracy. No modern Android compatibility or runnable historical release is claimed.
+[Static-check results](validation/static-checks.json) verify all 180 original hashes, 104 images, 30 XML resource files plus three manifests, Android activity classes and local Java resource references. Five pure-Java helper file instances also [compile with OpenJDK 21](validation/java-helpers.json). Later [build attempts with Android API 35](validation/historical-build-attempt.json) still fail on missing OpenCV/build inputs. The new numerical replay and Android application are separately labeled and tested; neither establishes a runnable historical release or camera/projector accuracy.
 
 ## Attribution and reuse
 

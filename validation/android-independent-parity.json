@@ -1,0 +1,270 @@
+{
+  "schema": "beam-android-independent-parity-v1",
+  "status": "passed",
+  "fixture_sha256": "adb86d2045a383883b568c5d7a7d7bd669d9e50e231c491490daa84cba9c8585",
+  "export_sha256": "c64ab686b59ddba62b833b9862e2d3fc288c5c4d3ef9e8ce3b4b28e82c5e29be",
+  "scene_mode_count": 26,
+  "pixels_compared": 80098,
+  "all_masks_exact": true,
+  "scaled_coordinate_tolerance": 3e-05,
+  "scaled_coordinate_definition": "abs(android-reference)/max(1,abs(reference)) per coordinate",
+  "maximum_scaled_coordinate_error": 2.1375343537410885e-06,
+  "scope": "Historical Android adaptation vs actual unchanged Java; corrected Android vs independent Python/geometry",
+  "source_sha256": {
+    "updated/synthetic.py": "302b6b8ad1b7fbbb3494aff5b9a3ca95211eff0b19853215888c8018906fd6e6",
+    "updated/compare_android.py": "a151412eecc331a1bd9c39bac991468fd09fed640e2dad03d0e2021e1d1fc7f8",
+    "updated/headless/BeamHeadless.java": "88eb0a499317d8fd78339055e6d09919ff65b572ba6157d068cbf60ef52b91b7",
+    "updated/android-replay/app/src/main/java/org/technion/beamreplay/CorrectedNumerics.java": "ea7ddfafb5dcbebc153888d5f7f69454bb32b2142800161df101624d3f821782",
+    "updated/android-replay/app/src/main/java/org/technion/beamreplay/HistoricalNumerics.java": "094543fa4216a33e2a15d77bce963775bcedeec9986cf4fe59204374ebbd2f2e",
+    "updated/android-replay/app/src/main/java/org/technion/beamreplay/ReplayActivity.java": "db6a640266e9f030d72d49ddf58722dc54d2e891dbae8c69994fcd5ec5f96228",
+    "updated/android-replay/app/src/main/java/org/technion/beamreplay/ReplayMetrics.java": "d0e79d75295350a7627faa87d52f454395674fd58047401d0a3e9b114e9e9742",
+    "updated/android-replay/app/src/main/java/org/technion/beamreplay/ReplayScene.java": "45e8772c1eb75c9254670d50f00f44564a7d177d607e18f4f6104c2d077db7a4",
+    "updated/android-replay/app/src/main/java/org/technion/beamreplay/ReplayView.java": "3691a2edb259b7e68ff678622db8fa849a5a7b8e5d29f722acd6ab9018a1bc29"
+  },
+  "scene_modes": [
+    {
+      "scene": "plane",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 576,
+      "mask_exact": true,
+      "max_absolute_m": 4.981689460947791e-08,
+      "max_relative_scaled": 3.992649036392734e-08
+    },
+    {
+      "scene": "plane",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 2256,
+      "mask_exact": true,
+      "max_absolute_m": 3.4843049334654097e-07,
+      "max_relative_scaled": 3.4843049334654097e-07
+    },
+    {
+      "scene": "tilted",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 554,
+      "mask_exact": true,
+      "max_absolute_m": 4.931640624761258e-07,
+      "max_relative_scaled": 4.906563634620925e-08
+    },
+    {
+      "scene": "tilted",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 2225,
+      "mask_exact": true,
+      "max_absolute_m": 5.650602414863926e-07,
+      "max_relative_scaled": 5.650602414863926e-07
+    },
+    {
+      "scene": "sphere",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 576,
+      "mask_exact": true,
+      "max_absolute_m": 3.591308598061005e-06,
+      "max_relative_scaled": 5.47758319056248e-08
+    },
+    {
+      "scene": "sphere",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 2256,
+      "mask_exact": true,
+      "max_absolute_m": 4.865306127976865e-07,
+      "max_relative_scaled": 4.865306127976865e-07
+    },
+    {
+      "scene": "step",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 576,
+      "mask_exact": true,
+      "max_absolute_m": 5.1307678328171846e-08,
+      "max_relative_scaled": 3.707905280740627e-08
+    },
+    {
+      "scene": "step",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 2256,
+      "mask_exact": true,
+      "max_absolute_m": 4.1618398682885527e-07,
+      "max_relative_scaled": 4.1618398682885527e-07
+    },
+    {
+      "scene": "calibrated",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 471,
+      "mask_exact": true,
+      "max_absolute_m": 4.921875031982381e-07,
+      "max_relative_scaled": 5.366275648183839e-08
+    },
+    {
+      "scene": "calibrated",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 1963,
+      "mask_exact": true,
+      "max_absolute_m": 2.047494028989405e-06,
+      "max_relative_scaled": 1.8167444381314834e-06
+    },
+    {
+      "scene": "distorted",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 459,
+      "mask_exact": true,
+      "max_absolute_m": 4.506835935558229e-07,
+      "max_relative_scaled": 5.0461883130051074e-08
+    },
+    {
+      "scene": "distorted",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 1904,
+      "mask_exact": true,
+      "max_absolute_m": 2.6515805724436348e-06,
+      "max_relative_scaled": 2.1375343537410885e-06
+    },
+    {
+      "scene": "projector_shadow",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 522,
+      "mask_exact": true,
+      "max_absolute_m": 4.981689460947791e-08,
+      "max_relative_scaled": 3.992649036392734e-08
+    },
+    {
+      "scene": "projector_shadow",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 2166,
+      "mask_exact": true,
+      "max_absolute_m": 3.4843049334654097e-07,
+      "max_relative_scaled": 3.4843049334654097e-07
+    },
+    {
+      "scene": "noise",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 845,
+      "mask_exact": true,
+      "max_absolute_m": 3.9190673817302013e-07,
+      "max_relative_scaled": 5.047333724476207e-08
+    },
+    {
+      "scene": "noise",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 2256,
+      "mask_exact": true,
+      "max_absolute_m": 3.4843049334654097e-07,
+      "max_relative_scaled": 3.4843049334654097e-07
+    },
+    {
+      "scene": "bright_contrast",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 0,
+      "mask_exact": true,
+      "max_absolute_m": 0,
+      "max_relative_scaled": 0
+    },
+    {
+      "scene": "bright_contrast",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 2256,
+      "mask_exact": true,
+      "max_absolute_m": 3.4843049334654097e-07,
+      "max_relative_scaled": 3.4843049334654097e-07
+    },
+    {
+      "scene": "low_contrast",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 576,
+      "mask_exact": true,
+      "max_absolute_m": 4.981689460947791e-08,
+      "max_relative_scaled": 3.992649036392734e-08
+    },
+    {
+      "scene": "low_contrast",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 0,
+      "mask_exact": true,
+      "max_absolute_m": 0,
+      "max_relative_scaled": 0
+    },
+    {
+      "scene": "corrupt_bit",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 576,
+      "mask_exact": true,
+      "max_absolute_m": 4.981689460947791e-08,
+      "max_relative_scaled": 3.992649036392734e-08
+    },
+    {
+      "scene": "corrupt_bit",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 2247,
+      "mask_exact": true,
+      "max_absolute_m": 1.0868613074421773e-05,
+      "max_relative_scaled": 1.242532856680336e-06
+    },
+    {
+      "scene": "zero_baseline",
+      "mode": "historical",
+      "pixels": 3072,
+      "valid": 528,
+      "mask_exact": true,
+      "max_absolute_m": 0,
+      "max_relative_scaled": 0
+    },
+    {
+      "scene": "zero_baseline",
+      "mode": "corrected",
+      "pixels": 3072,
+      "valid": 0,
+      "mask_exact": true,
+      "max_absolute_m": 0,
+      "max_relative_scaled": 0
+    },
+    {
+      "scene": "radial_center",
+      "mode": "historical",
+      "pixels": 3185,
+      "valid": 539,
+      "mask_exact": true,
+      "max_absolute_m": 5.665588398429122e-08,
+      "max_relative_scaled": 3.533361739170985e-08
+    },
+    {
+      "scene": "radial_center",
+      "mode": "corrected",
+      "pixels": 3185,
+      "valid": 2401,
+      "mask_exact": true,
+      "max_absolute_m": 3.916058399777711e-07,
+      "max_relative_scaled": 3.916058399777711e-07
+    }
+  ],
+  "independent_closed_form_center_ray": {
+    "decoded_gray_integer": 426,
+    "point": [
+      0.0,
+      0.0,
+      0.7178947368421054
+    ],
+    "expected_depth": 0.7178947368421054,
+    "passed": true
+  }
+}

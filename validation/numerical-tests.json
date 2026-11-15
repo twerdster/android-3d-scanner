@@ -1,0 +1,26 @@
+{
+  "schema": "beam-numerical-test-results-v1",
+  "checked_at_utc": "2026-11-15T10:46:57+00:00",
+  "command": "python3 updated/run_checks.py",
+  "python_version": "3.14.4",
+  "tests_run": 13,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 4.278032,
+  "status": "passed",
+  "source_sha256": {
+    "updated/__init__.py": "0282ad435def3121c88bac467f91d47c83ad82c935c7e99551a022b073bf3365",
+    "updated/attempt_historical_build.py": "7b0ee340c56a998be0c02336aab24b0fe08cb1c832cba6f02ed74b69452b5895",
+    "updated/build_headless.py": "8e77947374b30d4a11594b00f17c598ab484603394383c8cf372843cbbf0141c",
+    "updated/cli.py": "7e13ed091369dca3b7832fc9b25a814d0402d5fd5791de1c2ab0ef2cd0ef52b8",
+    "updated/compare_android.py": "a151412eecc331a1bd9c39bac991468fd09fed640e2dad03d0e2021e1d1fc7f8",
+    "updated/report.py": "d047a10b54ca75e1f1040407a3dc7f58ba3d340f9dd74e876bc8a1086dfd416e",
+    "updated/run_checks.py": "061cd1c6376b830ed136677834f2469b6153c02977e76ae582c8dbf72e5e269b",
+    "updated/synthetic.py": "302b6b8ad1b7fbbb3494aff5b9a3ca95211eff0b19853215888c8018906fd6e6",
+    "updated/headless/BeamHeadless.java": "88eb0a499317d8fd78339055e6d09919ff65b572ba6157d068cbf60ef52b91b7",
+    "updated/tests/test_scanner.py": "585e5d7239cd19ae4595c4bc21623ecd22c9ad89bfb005fc3bd85c86baecae7f"
+  },
+  "test_log": "test_clean_and_calibrated_gray_reconstruction_against_geometry (test_scanner.ScannerTests.test_clean_and_calibrated_gray_reconstruction_against_geometry) ... ok\ntest_corrupted_gray_bits_can_produce_undetected_outliers (test_scanner.ScannerTests.test_corrupted_gray_bits_can_produce_undetected_outliers) ... ok\ntest_headless_binary_bounds_and_trailing_data (test_scanner.ScannerTests.test_headless_binary_bounds_and_trailing_data) ... ok\ntest_historical_normalization_is_four_times_decoded_pixel (test_scanner.ScannerTests.test_historical_normalization_is_four_times_decoded_pixel) ... ok\ntest_independent_scene_surfaces_and_forward_projection (test_scanner.ScannerTests.test_independent_scene_surfaces_and_forward_projection) ... ok\ntest_invalid_calibration_and_frames_rejected (test_scanner.ScannerTests.test_invalid_calibration_and_frames_rejected) ... ok\ntest_no_depth_without_baseline (test_scanner.ScannerTests.test_no_depth_without_baseline) ... ok\ntest_noise_replay_and_low_contrast_rejection (test_scanner.ScannerTests.test_noise_replay_and_low_contrast_rejection) ... ok\ntest_nonidentity_radial_expected_ray_and_center_limit (test_scanner.ScannerTests.test_nonidentity_radial_expected_ray_and_center_limit) ... ok\ntest_original_triangulation_with_independent_oracle_projection (test_scanner.ScannerTests.test_original_triangulation_with_independent_oracle_projection) ... ok\ntest_projector_occlusion_comes_from_geometry_and_is_rejected (test_scanner.ScannerTests.test_projector_occlusion_comes_from_geometry_and_is_rejected) ... ok\ntest_unchanged_java_sources_match_recovery_manifest (test_scanner.ScannerTests.test_unchanged_java_sources_match_recovery_manifest) ... ok\ntest_unsigned_domain_all_1024_gray_codes (test_scanner.ScannerTests.test_unsigned_domain_all_1024_gray_codes) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 4.267s\n\nOK\n",
+  "scope": "Independent synthetic geometry and actual unchanged historical numerical methods; not historical Android/hardware validation"
+}

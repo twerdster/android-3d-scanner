@@ -1,0 +1,254 @@
+{
+  "schema": "beam-android-replay-results-v1",
+  "scope": "Scalar pre-Clear/pre-median numerical replay of bundled synthetic captures; not hardware calibration or scanning",
+  "fixture_sha256": "adb86d2045a383883b568c5d7a7d7bd669d9e50e231c491490daa84cba9c8585",
+  "scenes": [
+    {
+      "name": "plane",
+      "historical": {
+        "visible": 2256,
+        "accepted_visible": 576,
+        "rejected_visible": 1680,
+        "false_valid_occluded": 0,
+        "rmse_m": 2.1071864964482296,
+        "max_error_m": 6.5781259606859575
+      },
+      "corrected": {
+        "visible": 2256,
+        "accepted_visible": 2256,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.003178479896718021,
+        "max_error_m": 0.007223618773972048
+      }
+    },
+    {
+      "name": "tilted",
+      "historical": {
+        "visible": 2225,
+        "accepted_visible": 554,
+        "rejected_visible": 1671,
+        "false_valid_occluded": 0,
+        "rmse_m": 8.748883192435521,
+        "max_error_m": 112.97880502179687
+      },
+      "corrected": {
+        "visible": 2225,
+        "accepted_visible": 2225,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.003451832698555103,
+        "max_error_m": 0.01121887811374975
+      }
+    },
+    {
+      "name": "sphere",
+      "historical": {
+        "visible": 2256,
+        "accepted_visible": 576,
+        "rejected_visible": 1680,
+        "false_valid_occluded": 0,
+        "rmse_m": 27.43947051558784,
+        "max_error_m": 109.06117817938451
+      },
+      "corrected": {
+        "visible": 2256,
+        "accepted_visible": 2256,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.005390479687147355,
+        "max_error_m": 0.011163535081275726
+      }
+    },
+    {
+      "name": "step",
+      "historical": {
+        "visible": 2256,
+        "accepted_visible": 576,
+        "rejected_visible": 1680,
+        "false_valid_occluded": 0,
+        "rmse_m": 1.618863675969771,
+        "max_error_m": 4.983694631800223
+      },
+      "corrected": {
+        "visible": 2256,
+        "accepted_visible": 2256,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.003274981033444725,
+        "max_error_m": 0.00874960081155632
+      }
+    },
+    {
+      "name": "calibrated",
+      "historical": {
+        "visible": 1963,
+        "accepted_visible": 471,
+        "rejected_visible": 1492,
+        "false_valid_occluded": 0,
+        "rmse_m": 5.275497396627089,
+        "max_error_m": 61.35325574546362
+      },
+      "corrected": {
+        "visible": 1963,
+        "accepted_visible": 1963,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.0038883340061898037,
+        "max_error_m": 0.0203646124216781
+      }
+    },
+    {
+      "name": "distorted",
+      "historical": {
+        "visible": 1904,
+        "accepted_visible": 459,
+        "rejected_visible": 1445,
+        "false_valid_occluded": 0,
+        "rmse_m": 3.6015945491890413,
+        "max_error_m": 40.68865188838963
+      },
+      "corrected": {
+        "visible": 1904,
+        "accepted_visible": 1904,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.00365648820839974,
+        "max_error_m": 0.017902220602464356
+      }
+    },
+    {
+      "name": "projector_shadow",
+      "historical": {
+        "visible": 2166,
+        "accepted_visible": 522,
+        "rejected_visible": 1644,
+        "false_valid_occluded": 0,
+        "rmse_m": 2.06829387395514,
+        "max_error_m": 6.5781259606859575
+      },
+      "corrected": {
+        "visible": 2166,
+        "accepted_visible": 2166,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.003104142453341487,
+        "max_error_m": 0.007223618773972048
+      }
+    },
+    {
+      "name": "noise",
+      "historical": {
+        "visible": 2256,
+        "accepted_visible": 576,
+        "rejected_visible": 1680,
+        "false_valid_occluded": 269,
+        "rmse_m": 2.1071864964482296,
+        "max_error_m": 6.5781259606859575
+      },
+      "corrected": {
+        "visible": 2256,
+        "accepted_visible": 2256,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.003178479896718021,
+        "max_error_m": 0.007223618773972048
+      }
+    },
+    {
+      "name": "bright_contrast",
+      "historical": {
+        "visible": 2256,
+        "accepted_visible": 0,
+        "rejected_visible": 2256,
+        "false_valid_occluded": 0,
+        "rmse_m": null,
+        "max_error_m": null
+      },
+      "corrected": {
+        "visible": 2256,
+        "accepted_visible": 2256,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.003178479896718021,
+        "max_error_m": 0.007223618773972048
+      }
+    },
+    {
+      "name": "low_contrast",
+      "historical": {
+        "visible": 2256,
+        "accepted_visible": 576,
+        "rejected_visible": 1680,
+        "false_valid_occluded": 0,
+        "rmse_m": 2.1071864964482296,
+        "max_error_m": 6.5781259606859575
+      },
+      "corrected": {
+        "visible": 2256,
+        "accepted_visible": 0,
+        "rejected_visible": 2256,
+        "false_valid_occluded": 0,
+        "rmse_m": null,
+        "max_error_m": null
+      }
+    },
+    {
+      "name": "corrupt_bit",
+      "historical": {
+        "visible": 2256,
+        "accepted_visible": 576,
+        "rejected_visible": 1680,
+        "false_valid_occluded": 0,
+        "rmse_m": 2.082017823203017,
+        "max_error_m": 6.5781259606859575
+      },
+      "corrected": {
+        "visible": 2256,
+        "accepted_visible": 2247,
+        "rejected_visible": 9,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.47663810537661966,
+        "max_error_m": 14.678592965507766
+      }
+    },
+    {
+      "name": "zero_baseline",
+      "historical": {
+        "visible": 2304,
+        "accepted_visible": 528,
+        "rejected_visible": 1776,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.9977067589794866,
+        "max_error_m": 1.2296420715275718
+      },
+      "corrected": {
+        "visible": 2304,
+        "accepted_visible": 0,
+        "rejected_visible": 2304,
+        "false_valid_occluded": 0,
+        "rmse_m": null,
+        "max_error_m": null
+      }
+    },
+    {
+      "name": "radial_center",
+      "historical": {
+        "visible": 2401,
+        "accepted_visible": 539,
+        "rejected_visible": 1862,
+        "false_valid_occluded": 0,
+        "rmse_m": 1.6616645352919333,
+        "max_error_m": 3.379324835616243
+      },
+      "corrected": {
+        "visible": 2401,
+        "accepted_visible": 2401,
+        "rejected_visible": 0,
+        "false_valid_occluded": 0,
+        "rmse_m": 0.0031629319689335973,
+        "max_error_m": 0.0068915438652950006
+      }
+    }
+  ]
+}

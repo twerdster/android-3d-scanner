@@ -1,0 +1,83 @@
+{
+  "schema": "beam-historical-build-attempt-v1",
+  "attempts": [
+    {
+      "name": "studio-wrapper-entry",
+      "command": [
+        "java",
+        "-cp",
+        "gradle/wrapper/gradle-wrapper.jar",
+        "org.gradle.wrapper.GradleWrapperMain",
+        "assembleDebug"
+      ],
+      "working_directory": "versions/android-studio",
+      "exit_code": 1,
+      "output": "Error: Could not find or load main class org.gradle.wrapper.GradleWrapperMain\nCaused by: java.lang.ClassNotFoundException: org.gradle.wrapper.GradleWrapperMain\n"
+    },
+    {
+      "name": "submitted-source-compile",
+      "command": [
+        "javac",
+        "-encoding",
+        "UTF-8",
+        "-Xmaxerrs",
+        "8",
+        "-d",
+        "<repo>/updated/build/historical-attempt",
+        "<repo>/source/src/com/project/activities/MainActivity.java",
+        "<repo>/source/src/com/project/activities/MeshViewActivity.java",
+        "<repo>/source/src/com/project/logic/CalibrationFile.java",
+        "<repo>/source/src/com/project/logic/PhotoGrabber.java",
+        "<repo>/source/src/com/project/logic/Reconstructor.java",
+        "<repo>/source/src/com/project/logic/SlideShow.java",
+        "<repo>/source/src/com/project/logic/XMLparser.java",
+        "<repo>/source/src/com/project/mesh/logic/Mesh.java",
+        "<repo>/source/src/com/project/mesh/logic/MeshGLRenderer.java",
+        "<repo>/source/src/com/project/mesh/logic/MeshGLSurfaceView.java",
+        "<repo>/source/src/com/project/mesh/logic/Quaternion.java"
+      ],
+      "working_directory": ".",
+      "exit_code": 1,
+      "output": "<repo>/source/src/com/project/activities/MainActivity.java:5: error: package org.opencv.android does not exist\nimport org.opencv.android.BaseLoaderCallback;\n                         ^\n<repo>/source/src/com/project/activities/MainActivity.java:6: error: package org.opencv.android does not exist\nimport org.opencv.android.LoaderCallbackInterface;\n                         ^\n<repo>/source/src/com/project/activities/MainActivity.java:7: error: package org.opencv.android does not exist\nimport org.opencv.android.OpenCVLoader;\n                         ^\n<repo>/source/src/com/project/activities/MainActivity.java:9: error: package android.app does not exist\nimport android.app.Activity;\n                  ^\n<repo>/source/src/com/project/activities/MainActivity.java:10: error: package android.content does not exist\nimport android.content.Intent;\n                      ^\n<repo>/source/src/com/project/activities/MainActivity.java:11: error: package android.os does not exist\nimport android.os.Bundle;\n                 ^\n<repo>/source/src/com/project/activities/MainActivity.java:12: error: package android.os does not exist\nimport android.os.CountDownTimer;\n                 ^\n<repo>/source/src/com/project/activities/MainActivity.java:13: error: package android.os does not exist\nimport android.os.Environment;\n                 ^\n8 errors\nonly showing the first 8 errors, of 237 total; use -Xmaxerrs if you would like to see more\n"
+    },
+    {
+      "name": "submitted-source-with-api35",
+      "command": [
+        "javac",
+        "-encoding",
+        "UTF-8",
+        "-Xmaxerrs",
+        "12",
+        "-classpath",
+        "<android-sdk>/platforms/android-35/android.jar",
+        "-d",
+        "<repo>/updated/build/historical-attempt",
+        "<repo>/source/src/com/project/activities/MainActivity.java",
+        "<repo>/source/src/com/project/activities/MeshViewActivity.java",
+        "<repo>/source/src/com/project/logic/CalibrationFile.java",
+        "<repo>/source/src/com/project/logic/PhotoGrabber.java",
+        "<repo>/source/src/com/project/logic/Reconstructor.java",
+        "<repo>/source/src/com/project/logic/SlideShow.java",
+        "<repo>/source/src/com/project/logic/XMLparser.java",
+        "<repo>/source/src/com/project/mesh/logic/Mesh.java",
+        "<repo>/source/src/com/project/mesh/logic/MeshGLRenderer.java",
+        "<repo>/source/src/com/project/mesh/logic/MeshGLSurfaceView.java",
+        "<repo>/source/src/com/project/mesh/logic/Quaternion.java"
+      ],
+      "working_directory": ".",
+      "exit_code": 1,
+      "output": "<repo>/source/src/com/project/activities/MainActivity.java:5: error: package org.opencv.android does not exist\nimport org.opencv.android.BaseLoaderCallback;\n                         ^\n<repo>/source/src/com/project/activities/MainActivity.java:6: error: package org.opencv.android does not exist\nimport org.opencv.android.LoaderCallbackInterface;\n                         ^\n<repo>/source/src/com/project/activities/MainActivity.java:7: error: package org.opencv.android does not exist\nimport org.opencv.android.OpenCVLoader;\n                         ^\n<repo>/source/src/com/project/activities/MainActivity.java:20: error: cannot find symbol\nimport com.project.R;\n                  ^\n  symbol:   class R\n  location: package com.project\n<repo>/source/src/com/project/logic/Reconstructor.java:8: error: package org.opencv.core does not exist\nimport org.opencv.core.CvType;\n                      ^\n<repo>/source/src/com/project/logic/Reconstructor.java:9: error: package org.opencv.core does not exist\nimport org.opencv.core.Mat;\n                      ^\n<repo>/source/src/com/project/logic/Reconstructor.java:10: error: package org.opencv.core does not exist\nimport org.opencv.core.Size;\n                      ^\n<repo>/source/src/com/project/logic/Reconstructor.java:11: error: package org.opencv.highgui does not exist\nimport org.opencv.highgui.Highgui;\n                         ^\n<repo>/source/src/com/project/logic/Reconstructor.java:12: error: package org.opencv.imgproc does not exist\nimport org.opencv.imgproc.Imgproc;\n                         ^\n<repo>/source/src/com/project/activities/MainActivity.java:52: error: cannot find symbol\n    private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {\n            ^\n  symbol:   class BaseLoaderCallback\n  location: class MainActivity\n<repo>/source/src/com/project/logic/Reconstructor.java:272: error: cannot find symbol\n\tprivate void SaveBitmap(Mat mat, String name){\n\t                        ^\n  symbol:   class Mat\n  location: class Reconstructor\n<repo>/source/src/com/project/logic/SlideShow.java:3: error: cannot find symbol\nimport com.project.R;\n                  ^\n  symbol:   class R\n  location: package com.project\nNote: Some input files use or override a deprecated API.\nNote: Recompile with -Xlint:deprecation for details.\n12 errors\nonly showing the first 12 errors, of 63 total; use -Xmaxerrs if you would like to see more\n"
+    }
+  ],
+  "java": "openjdk version \"21.0.11\" 2026-04-21\nOpenJDK Runtime Environment Homebrew (build 21.0.11)\nOpenJDK 64-Bit Server VM Homebrew (build 21.0.11, mixed mode, sharing)",
+  "available_gradle_command": false,
+  "android_sdk_api35_available": true,
+  "missing_studio_inputs": [
+    "gradle/wrapper/gradle-wrapper.jar",
+    "openCVLibrary246",
+    "openCVLibrary2410",
+    "app/proguard-rules.txt"
+  ],
+  "result": "Historical Android build blocked; no APK produced. Desktop adapter validation is separate.",
+  "execution_policy": "Trusted java/javac only; archived wrapper scripts and archived binaries were not executed."
+}

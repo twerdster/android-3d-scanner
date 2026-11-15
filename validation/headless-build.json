@@ -1,0 +1,25 @@
+{
+  "schema": "beam-headless-build-v1",
+  "status": "passed",
+  "compiler": "javac 21.0.11",
+  "exit_code": 0,
+  "diagnostics": "",
+  "unchanged_original_sources": {
+    "source/src/com/project/logic/Reconstructor.java": "720351709b2c5f6219cf2779ff5bef7c09380d934d601b1625b966e9e972ad4b",
+    "source/src/com/project/logic/CalibrationFile.java": "edf83543fe405f9ce90072249342c627a228a330003c8da6be026ada458b5398"
+  },
+  "scope": "Desktop numerical-method execution with compile-only platform shims; not an Android/OpenCV application build",
+  "original_methods": [
+    "DecodeGraySimpleBW",
+    "NormalizeDecodedValues",
+    "CorrectOpticalDistortionCPU",
+    "ReconstructCPU"
+  ],
+  "excluded_runtime": [
+    "capture",
+    "Android UI",
+    "OpenCV",
+    "Clear clipping",
+    "Z median filter"
+  ]
+}

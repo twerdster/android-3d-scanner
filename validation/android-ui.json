@@ -1,0 +1,25 @@
+{
+  "device": "Android14 API34 ARM64 emulator",
+  "actions": [
+    {
+      "action": "select Historical mode",
+      "status": "Visible accepted 576/2256 \u2022 rejected 1680\nRMSE 2.10719 m \u2022 max 6.57813 m\nFalse valid outside visibility: 0"
+    },
+    {
+      "action": "select sphere / Corrected / Point cloud and drag",
+      "canvas_changed": true
+    },
+    {
+      "action": "Observation and pattern seek",
+      "caption": "Capture 7/12 \u00b7 Gray bit 5"
+    },
+    {
+      "action": "force-stop, relaunch and replay",
+      "metrics_exactly_reproduced": true
+    }
+  ],
+  "passed": true,
+  "schema": "beam-android-ui-validation-v1",
+  "scope": "New supplied-capture replay interface; no physical camera/projector operation",
+  "fixture_sha256": "adb86d2045a383883b568c5d7a7d7bd669d9e50e231c491490daa84cba9c8585"
+}
