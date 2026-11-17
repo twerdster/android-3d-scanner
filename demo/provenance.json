@@ -1,0 +1,20 @@
+{
+  "scope": "Saved-output interactive display only; no reconstruction in browser",
+  "datasets": [
+    {
+      "original_count": 77870,
+      "display_count": 19468,
+      "sampling_stride": 4,
+      "source_sha256": "adf35940850d53b2dd683a5d06a32978d2b59bc53aca7962a408f848c97e3a9d",
+      "display_axes": "camera",
+      "name": "Stanford Dragon \u00b7 corrected decoded captures",
+      "note": "Metres. Twelve generated captures; supplied calibration; one camera view.",
+      "source": "showcase/results/dragon-reconstruction.ply",
+      "display_transform": "Camera Y flipped for display only; source points unchanged"
+    }
+  ],
+  "regression_report": {
+    "source": "updated/results/index.html",
+    "sha256": "72713b88e631e7b7f615da804a8eb07ee67b44492b0ebdd30f460ddae27a7f72"
+  }
+}

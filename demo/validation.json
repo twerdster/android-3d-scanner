@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-17",
+  "browser": "Current installed Google Chrome via isolated Playwright context",
+  "viewports_css_pixels": [
+    [
+      1280,
+      950
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "checks": [
+    {
+      "name": "drag_orbit",
+      "pass": true
+    },
+    {
+      "name": "color_size_slice",
+      "pass": true
+    },
+    {
+      "name": "rotate_toggle",
+      "pass": true
+    }
+  ],
+  "uncaught_javascript_errors": [],
+  "failed_asset_requests": [],
+  "horizontal_overflow_desktop": false,
+  "horizontal_overflow_phone": false,
+  "scope": "Browser interaction/rendering only; no new physical device, original app, reconstruction accuracy or native algorithm validation.",
+  "editorial_review": {
+    "actual_claude_editorial_rewrite": "completed 2026-11-17",
+    "actual_claude_followup_review": "completed 2026-11-17",
+    "actual_claude_focused_delta_review": "completed 2026-11-17; no blocking defects; verified small fixes applied",
+    "adds_native_runtime_coverage": false
+  },
+  "preserved_source_tree": "040000 tree cf49d876aaadde784fc0c698d40d035f16c5b209\tsource\n040000 tree 8d4eab8ac7b4812a6c764a2b13dbd7017094b75b\tversions",
+  "previous_document_sha256": {
+    "root": "6c5d1e7daf5a11f08f12c5f90d18f9d923b26d162e79d830c5c11b7f91b7e14e",
+    "updated": "8e1f3c3eeb53d754b4a5c1684df1739ad3d7806ab569cca9c54cc3f46e1c49c8"
+  }
+}
